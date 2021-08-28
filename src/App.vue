@@ -4,6 +4,10 @@
       <router-link to="/">Home</router-link>
       <router-link to="/about">Rating</router-link>
       <router-link to="/my-page">Sustainable</router-link>
+      <div id="copyright" >
+        <h3>© 2021 mec</h3>
+
+        </div>
     </div>
     <router-view />
   </div>
@@ -33,4 +37,9 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+#copyright {
+  position: relative;
+  top: 2000px;
+  }
 </style>

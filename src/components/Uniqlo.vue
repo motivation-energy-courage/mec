@@ -1,7 +1,6 @@
 <template>
   <div class="human">
     <div class="uniqlo">
-      <h1 style="text-align: cemter">ユニクロ</h1>
 
       <img
         src="https://pics.prcm.jp/69e71d934de91/50048210/png/50048210.png"
@@ -12,6 +11,7 @@
     </div>
   </div>
 </template>
+
 
 <style>
 .human {

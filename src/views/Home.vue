@@ -8,33 +8,50 @@
           「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
         </h3>
       </div>
-      
     </div>
     <div class="quiz">
       <h1>Quiz Game</h1>
       <h3 style="text-align: center">
         エシカルファッションについてあなたはどれだけ知っていますか？<br />環境・労働・動物の三つの観点から<br />考えていきましょう
       </h3>
-      <h1>SNS</h1>
-      <h3 style="text-align: center">
-        エシカルファッションについて分かりやすく情報を載せているSNSを紹介します。
+      <h1>Information</h1>
+      <h3 style="text-align: center,font-size: 30px;">
+        エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
       </h3>
-
-      <div class="shokai">
-        <h2>①Ref Waseda ②エシカルな暮らし</h2>
-
-
-
+      <div class="site">
+<iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
+<iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
+<iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
 
 
+
+</div>
+      <div class="shokai" style="word-spacing:80px;">
+        <h2>①歴史に残る悲劇・ラナプラザ事件について ②エシカルファッションってどんなもの？ ③ファストファッションの裏にある事実
+        </h2>
+
+        <article class="tile is-child notification">
+          <div class="instagram-content">
+          <instagram-embed
+  :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
+  :max-width=500
+/>
+          </div>
+        </article>
       </div>
     </div>
   </div>
 </template>
 
-
-
-
+<script>
+import InstagramEmbed from 'vue-instagram-embed';
+ 
+export default {
+  components: {
+    InstagramEmbed
+  }
+}
+</script>
 
 <style>
 .home {
@@ -121,5 +138,18 @@
 .shokai {
   position: absolute;
   top: 440px;
+  left: 30px;
+  font-size: 14px;
+}
+
+iframe {
+  width: 430px;
+  height: 550px;
+  margin: 0px 15px 0px 0px;
+  padding: 10px;
+}
+
+.site{
+  float: right;
 }
 </style>
