@@ -38,7 +38,7 @@
 
           <div class="zaraanimalrate">
         <img src="https://lh3.googleusercontent.com/KbbVQ7vvnlOu9V2YCCQD5jR3XZm0XJAu82W-EC3cLyGfDZ4p-xH35ADvYb_1zdMOUJ0_l5aVXN1cg4kcS6P5xn7Nzh_6QbDWfevSNG-y005B7I3wKVBhFa10CfiYLYS1YWXICznDn4RrbaE6RMou-gFumy5OvhkrplREO3CAvkSjvfbvsZdXaqmlY57mjAi00WETKBCWfiY8u92DsBY01VmA9W5_bfI-fxD1P8-kZ8yGn_TpuK5qZ7XfS4JmuJy3PF_EBBj4lQhJlxvcMufsovoAUFGTtumMKnMbSDCQJoJEaQLV3pzBHEcZo5Fpy8o31AA17b6yL9LC99GA4Ja8DLlisUJADTyl-40alggVpQoRVdyWYT1VH7eiUwY3zC2y5RfbdTWeMlxX8dKxpq9w60JPFu8GM8mrrFbGNh3lozuKtFsRjvzCsnjyD_NKTrFrTF0kU3Klu_8hssjvBsVoF_oLOevmSpSXKQPWzWzwsTNjmVYXXc7DnT5vpTN5AfajqSAy6GKYoW-_O5s1axKbcvlIkzkBkfnmI_nOZkdcxKNWeY9Z0SygNiSaXriGIW4MvhkBJ4Qu678s-moFGn_9godsrdGAAbXvLn5NEout2N0wQ1VGuEWK2_M5x9l_3WjJaIx_vlC4Br7VE_HTbxmr79mIEGFMy9K8p4X7opG2jKkSdadhuBKz7NfBNoJj6qT5KRdGn9ruJ5_IjDYHCCTuhug=w1600-h1200-no?authuser=0" width="70" height="50">
-          <h3 style="line-height: 0px;">Labor Rating</h3>
+          <h3 style="line-height: 0px;">Animal Rating</h3>
           <h4 style="line-height: 10px;">⭐️⭐️★★★</h4>
           <h4 style="line-height: 8px;">2.0/5.0</h4></div>
                                    <div class="zaraanimalphraze">
@@ -63,7 +63,7 @@
   position: relative;
   top: 100px;
   text-align: center;
-  color: aqua;
+  color: white;
 }
 
 .comprete {
@@ -203,13 +203,13 @@
 }
 
 .box {
-    position: absolute;
-    top: 340px;
-    right: 370px;
-    padding: 0.5em 1em;
-    margin: 2em 0;
-    color: #232323;
-    background: #fff8e8;
-    border-left: solid 10px #ffc06e;
+  position: absolute;
+  top: 340px;
+  right: 370px;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #232323;
+  background: #fff8e8;
+  border-left: solid 10px #ffc06e;
 }
 </style>

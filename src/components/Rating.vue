@@ -7,6 +7,7 @@
           Fast Fashion Brand
         </h2> -->
       </div>
+
       <div>
         <ZARA />
       </div>
