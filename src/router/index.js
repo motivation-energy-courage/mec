@@ -1,8 +1,11 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 import Home from "../views/Home.vue"
+
 import About from "../views/About.vue"
 import Quiz from "../views/Quiz.vue"
+import MyPage from "../views/MyPage.vue"
+
 
 Vue.use(VueRouter)
 
@@ -21,6 +24,11 @@ const routes = [
     path: "/quiz",
     name: "Quiz",
     component: Quiz,
+  },
+  {
+    path: "/my-page",
+    name: "MyPage",
+    component: MyPage, // これを更新
   },
 ]
 

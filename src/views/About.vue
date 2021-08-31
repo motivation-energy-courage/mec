@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+
+      <div>
+        <Rating />
+      </div>
 </template>
+
+<script>
+
+import Rating from "@/components/Rating.vue"
+
+export default {
+  components: {
+    Rating,
+  },
+}
+</script>
+
+

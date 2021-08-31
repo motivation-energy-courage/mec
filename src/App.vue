@@ -1,30 +1,38 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+
+      <router-link to="/">Home</router-link> 
+      <router-link to="/about">About</router-link> 
       <router-link to="/quiz">Quiz</router-link>
+
+  
+      <router-link to="/my-page">Sustainable</router-link>
+
     </div>
     <router-view />
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 #nav {
-  padding: 30px;
+  padding: 25px;
+
+  text-align: right;
+  font-family: "Baskerville Old Face", serif;
+
+  position: absolute;
+  top: 0%;
+  right: 10px;
+  z-index: 10;
 }
 
 #nav a {
+  text-decoration: none;
+  color: white;
   font-weight: bold;
-  color: #2c3e50;
+  font-size: 25px;
+  padding: 15px;
 }
 
 #nav a.router-link-exact-active {
