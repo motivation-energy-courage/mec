@@ -1,5 +1,4 @@
 <template>
-
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
       <div id="team"><h4>MEC</h4></div>
@@ -24,12 +23,11 @@
         <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
         <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
         <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
-        
-      </div>
+       </div>
       <div class="shokai" style="word-spacing: 80px">
         <h2>①歴史に残る悲劇・ラナプラザ事件について ②エシカルファッションってどんなもの？ ③ファストファッションの裏にある事実
         </h2>
-    <div>
+        <div>
       <insta />
     </div>
 
