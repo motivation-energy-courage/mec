@@ -4,21 +4,11 @@
       Sustainable Tips
     </h1>
 
-    <div>
-      <Uniqlo />
-    </div>
+
   </div>
 </template>
 
-<script>
-import Uniqlo from "@/components/Uniqlo.vue"
 
-export default {
-  components: {
-    Uniqlo,
-  },
-}
-</script>
 
 <style scoped>
 .my-page {

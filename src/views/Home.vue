@@ -1,6 +1,8 @@
 <template>
+
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
+      <div id="team"><h4>MEC</h4></div>
     <div class="honbun">
       <div class="introduce">
         <h3 style="text-align: center">
@@ -12,44 +14,38 @@
     <div class="quiz">
       <h1>Quiz Game</h1>
       <h3 style="text-align: center">
-        エシカルファッションについてあなたはどれだけ知っていますか？<br />環境・労働・動物の三つの観点から<br />考えていきましょう
+        エシカルファッションについてあなたはどれだけ知っていますか？<br />環境・労働・動物の三つの観点から<br />考えていきましょう。
       </h3>
       <h1>Information</h1>
       <h3 style="text-align: center,font-size: 30px;">
         エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
       </h3>
       <div class="site">
-<iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
-<iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
-<iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
-
-
-
-</div>
-      <div class="shokai" style="word-spacing:80px;">
+        <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
+        <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
+        <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
+        
+      </div>
+      <div class="shokai" style="word-spacing: 80px">
         <h2>①歴史に残る悲劇・ラナプラザ事件について ②エシカルファッションってどんなもの？ ③ファストファッションの裏にある事実
         </h2>
-
-        <article class="tile is-child notification">
-          <div class="instagram-content">
-          <instagram-embed
-  :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
-  :max-width=500
-/>
-          </div>
-        </article>
-      </div>
+    <div>
+      <insta />
     </div>
+
+       </div>
+      </div>
   </div>
 </template>
 
 <script>
-import InstagramEmbed from 'vue-instagram-embed';
- 
+
+import Insta from '../components/Insta.vue'
+
 export default {
   components: {
-    InstagramEmbed
-  }
+    Insta,
+  },
 }
 </script>
 
@@ -57,7 +53,10 @@ export default {
 .home {
   background-image: url(https://cdn.pixabay.com/photo/2016/10/31/02/29/woman-1784755_1280.jpg);
   background-size: cover;
-  height: 580px;
+  background-color:rgba(255,255,255,0.09);
+  background-blend-mode:lighten;
+
+  height: 790px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -86,7 +85,7 @@ export default {
 .quiz {
   font-family: "Baskerville Old Face", serif;
   position: relative; /*絶対配置*/
-  top: 800px;
+  top: 950px;
   text-align: center;
 }
 
@@ -130,9 +129,22 @@ export default {
   }
 }
 
+#team {
+  font-size: 20px;
+  position: absolute;
+  top: 450px;
+  left: 1240px;
+  font-family: "Sacramento";
+  color: white;
+  padding: 1rem 0.5rem;
+  line-height: 0.85em;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+}
+
 .introduce h3 {
   position: absolute; /*絶対配置*/
-  top: 600px;
+  top: 760px;
 }
 
 .shokai {
@@ -146,10 +158,10 @@ iframe {
   width: 430px;
   height: 550px;
   margin: 0px 15px 0px 0px;
-  padding: 10px;
+  padding: 10px; 
 }
 
 .site{
-  float: right;
+  display: flex;
 }
 </style>
