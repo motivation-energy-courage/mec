@@ -1,6 +1,6 @@
 <template>
   <div class="quiz">
-    <h1>問題</h1>
+    <h1>Question</h1>
 
     <div class="quiz1">
       <h3>{{ question.title }}</h3>
@@ -9,13 +9,20 @@
           {{ answer.choice }}
         </button>
       </div>
+      <div class="answer">
+        <h2>Answer</h2>
+      </div>
       <div>{{ seikaiOrFuseikai }}</div>
+      <div class="questions">
+        <Questions msg="問題2" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: ["Questions"],
   data() {
     return {
       seikaiOrFuseikai: "",
@@ -60,8 +67,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: left;
-  border-radius: 50%;
-
   color: rgb(43, 41, 41);
 }
 
@@ -79,5 +84,10 @@ export default {
   flex-direction: column;
   align-items: center;
   padding-bottom: 0.5rem;
+}
+
+.answer {
+  color: rgb(43, 41, 41);
+  padding-top: 3rem;
 }
 </style>
