@@ -3,36 +3,278 @@
     <div class="subtitle">
       <h1 style="text-align: center; padding: 70px; font-size: 50px">Rating</h1>
       <div class="brand">
-        <!-- <h2 style="text-align: center; padding: 70px; font-size: 34px">
+        <h2 style="text-align: center; padding: 70px; font-size: 34px">
           Fast Fashion Brand
-        </h2> -->
+        </h2>
       </div>
 
-      <div>
-        <ZARA />
+      <div class="item">
+        <div v-on:click="zara">ZARA</div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div v-on:click="uniqlo">UNIQLO</div>
+        &nbsp;&nbsp;&nbsp;
+        <div v-on:click="gu">GU</div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div v-on:click="shimamura">しまむら</div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item2">
+          <br />
+          <div v-on:click="hm">H&M</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div v-on:click="gap">GAP</div>
+          &nbsp;&nbsp;&nbsp;
+          <div v-on:click="muji">無印良品</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div v-on:click="adidas">adidas</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="brand2">
+            <h2 style="text-align: center; font-size: 34px">
+              Ethical Fashion Brand
+            </h2>
+          </div>
+          <div class="item3">
+            <br />
+            <div v-on:click="peopletree">PeopleTree</div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <div v-on:click="patagonia">Patagonia</div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <div v-on:click="nike">NIKE</div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <div v-on:click="stella">Stella McCartney</div>
+            &nbsp;
+          </div>
+        </div>
       </div>
-      <!-- <div class="item">
-        <a href="http://127.0.0.1:5501/index.html">UNIQLO</a
-        >&nbsp;&nbsp;&nbsp;&nbsp;
-        <a
-          href="https://www.e-pokke.com/blog/instagram-basic-display-api.html#step6"
-          >ZARA</a
-        >&nbsp;&nbsp;&nbsp;&nbsp;
-        <a
-          href="https://www.e-pokke.com/blog/instagram-basic-display-api.html#step6"
-          >H&M</a
-        >
-      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import ZARA from "@/components/ZARA.vue"
+// import PeopleTree from "@/components/PeopleTree.vue"
+// import ZARA from './ZARA.vue'
 
 export default {
-  components: {
-    ZARA,
+  methods: {
+    // zara専用のページに飛ばす
+    zara: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "ZARA",
+          total: "⭐️⭐️★★★",
+          location: "Spain",
+          price: "⭐️⭐️★★★",
+          id: 0,
+          totalnum: "2.0/5.0",
+          envrate: "⭐️★★★★",
+          enbratenum: "2.0/5.0",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+          brandpic: "ハロー",
+        },
+      })
+    },
+    uniqlo: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "UNIQLO",
+          total: "⭐️⭐️★★★",
+          location: "JAPAN",
+          price: "⭐️⭐️★★★",
+          id: 0,
+          totalnum: "2.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    gu: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "GU",
+          total: "⭐️⭐️★★★",
+          location: "JAPAN",
+          price: "⭐️⭐️★★★",
+          id: 0,
+          totalnum: "2.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    shimamura: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    hm: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    gap: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    muji: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    adidas: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    peopletree: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    patagonia: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    nike: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+        },
+      })
+    },
+    stella: function () {
+      this.$router.push({
+        name: "Detail",
+        params: {
+          brand: "しまむら",
+          total: "⭐️★★★★",
+          location: "JAPAN",
+          price: "⭐️★★★★",
+          id: 0,
+          totalnum: "1.0/5.0",
+          envrate: "⭐️⭐️★★★",
+          laborrate: "⭐️⭐️★★★",
+          labornum: "2.0/5.0",
+          animalrate: "⭐️⭐️★★★",
+          animalnum: "2.0/5.0",
+          enbratenum: "3.0/5.0",
+        },
+      })
+    },
   },
 }
 </script>
@@ -54,21 +296,46 @@ export default {
   top: 250px;
   font-family: "Baskerville Old Face", serif;
 }
-
 .item {
   position: absolute;
-  top: 700px;
+  top: 120%;
   left: 33%;
+  display: flex;
   font-size: 30px;
-  text-align: center;
   font-family: "Baskerville Old Face", serif;
 }
+
 .item a {
   text-decoration: none;
   color: black;
 }
 
+.item2 {
+  text-align: center;
+  position: absolute;
+  top: 100px;
+  left: 10px;
+
+  display: flex;
+  font-size: 30px;
+  font-family: "Baskerville Old Face", serif;
+}
+
+.item3 {
+  position: absolute;
+  top: 360%;
+  display: flex;
+  font-size: 30px;
+  font-family: "Baskerville Old Face", serif;
+}
+
 .subtitle h1 {
   color: white;
+}
+
+.brand2 {
+  position: absolute;
+  top: 70px;
+  left: 50px;
 }
 </style>

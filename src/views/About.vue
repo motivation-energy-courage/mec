@@ -1,12 +1,10 @@
 <template>
-
-      <div>
-        <Rating />
-      </div>
+  <div>
+    <Rating />
+  </div>
 </template>
 
 <script>
-
 import Rating from "@/components/Rating.vue"
 
 export default {
@@ -15,5 +13,3 @@ export default {
   },
 }
 </script>
-
-

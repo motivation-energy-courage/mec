@@ -6,7 +6,7 @@
     <div>
       <GU />
     </div>
- </div>
+  </div>
 </template>
 
 <script>
