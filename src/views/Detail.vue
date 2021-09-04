@@ -6,12 +6,9 @@
         {{ this.$route.params.brand }}
       </h1>
       <div class="zaraimage">
-        <img
-          class="img-border"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GU_logo.svg/1200px-GU_logo.svg.png"
-          width="320"
-          height="280"
-        />
+         <img v-bind:src="imgPath" width="320"
+          height="280"/>
+
         <div class="comprete">
           <img
             v-if="badness"
@@ -111,7 +108,7 @@
             <h3 style="line-height: 0px">Environment Rating</h3>
             <h4 style="line-height: 10px">{{ this.$route.params.envrate }}</h4>
             <h4 style="line-height: 8px">
-              {{ this.$route.params.labornum }}
+              {{ this.$route.params.envnum }}
             </h4>
           </div>
           <div class="zaraenvironmentphraze">
@@ -169,12 +166,43 @@
           </div>
 
           <div class="zaraanimalrate">
-            <img
+            <!-- <img
               class="animalimg"
               src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-040.png"
               width="40"
               height="40"
-            />
+            /> -->
+
+             <img
+            v-if="animalbadness"
+            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-044.png"
+            width="40"
+            height="40"
+          />
+          <img
+            v-if="animalsadness"
+            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-036.png"
+            width="40"
+            height="40"
+          />
+          <img
+            v-if="animalsoso"
+            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-012.png"
+            width="40"
+            height="40"
+          />
+          <img
+            v-if="animalhappy"
+            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-007.png"
+            width="40"
+            height="40"
+          />
+          <img
+            v-if="animalgreat"
+            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-013.png"
+            width="40"
+            height="40"
+          />
             <h3 style="line-height: 0px">Animal Rating</h3>
             <h4 style="line-height: 10px">
               {{ this.$route.params.animalrate }}
@@ -208,7 +236,7 @@ export default {
     animalrate: String,
     animalnum: String,
     brandpic: String,
-    envratenum: String,
+    envnum: String,
   },
   data() {
     return {
@@ -227,6 +255,12 @@ export default {
       laborsoso: false,
       laborhappy: false,
       laborgreat: false,
+      animalbadness: false,
+      animalsadness: false,
+      animalsoso: false,
+      animalhappy: false,
+      animalgreat: false,
+      imgPath: this.$route.params.brandpic,
       texts: [
         "地球に関して言えば、ザラは私たちから「十分ではない」という評価を得ています。Zaraの親会社であるInditexは、Closing theloopと呼ばれる修復および再利用プログラムを開始しました。このプログラムは、顧客が古着を店内または郵便局から降ろして、セカンドライフを獲得する機会を提供します。これは良い取り組みです。ブランドはリサイクルパッケージも使用しています。しかし、製品を製造する際に繊維の無駄を最小限に抑えるという証拠はありません。また、ザラは自社の事業とサプライチェーンから発生する温室効果ガス排出量を削減するという絶対的な目標を設定していますが、その目標を達成するために順調に進んでいるという証拠はありません。",
         "ZARAはあああああああああああああ<br>ああああああああああああ",
@@ -245,27 +279,46 @@ export default {
   created: function () {
     if (this.total === "⭐️⭐️★★★") {
       this.sadness = true
-    } else if (this.total === "⭐️★★★★") {
+    }if (this.total === "⭐️★★★★") {
       this.badness = true
-    } else if (this.total === "⭐️⭐️⭐️★★") {
+    }  if (this.total === "⭐️⭐️⭐️★★") {
       this.soso = true
-    } else if (this.total === "⭐️⭐️⭐️⭐️★") {
+    }  if (this.total === "⭐️⭐️⭐️⭐️★") {
       this.happy = true
-    } else if (this.total === "⭐️⭐️⭐️⭐️⭐️") {
+    }  if (this.total === "⭐️⭐️⭐️⭐️⭐️") {
       this.great = true
-    } else if (this.total === "⭐️⭐️★★★") {
+    }  if (this.envrate === "⭐️⭐️★★★") {
       this.envsadness = true
-    } else if (this.envrate === "⭐️★★★★") {
+    }  if (this.envrate === "⭐️★★★★") {
       this.envbadness = true
-    } else if (this.envrate === "⭐️⭐️⭐️★★") {
+    }  if (this.envrate === "⭐️⭐️⭐️★★") {
       this.envsoso = true
-    } else if (this.envrate === "⭐️⭐️⭐️⭐️★") {
+    }  if (this.envrate === "⭐️⭐️⭐️⭐️★") {
       this.envhappy = true
-    } else if (this.envrate === "⭐️⭐️⭐️⭐️⭐️") {
+    }  if (this.envrate === "⭐️⭐️⭐️⭐️⭐️") {
       this.envgreate = true
-    } else if (this.laborrate === "⭐️⭐️★★★") {
+    }if (this.laborrate === "⭐️⭐️★★★") {
       this.laborsadness = true
+    }if (this.laborrate ==="⭐️★★★★") {
+      this.laborbadness = true
+    }if (this.laborrate === "⭐️⭐️⭐️★★"){
+      this.laborsoso = true
+    }if (this.laborrate === "⭐️⭐️⭐️⭐️★"){
+      this.laborhappy = true
+    }if (this.laborrate === "⭐️⭐️⭐️⭐️⭐️"){
+      this.laborgreat = true
+    }if (this.animalrate ==="⭐️★★★★"){
+      this.animalbadness = true
+    }if (this.animalrate ==="⭐️⭐️★★★"){
+      this.animalsadness = true
+    }if (this.animalrate ==="⭐️⭐️⭐️★★"){
+    this.animalsoso = true
+    }if (this.animalrate ==="⭐️⭐️⭐️⭐️★"){
+      this.animalhappy = true
+    }if (this.animalrate === "⭐️⭐️⭐️⭐️⭐️"){
+      this.animalgreat = true
     }
+    
 
     //  if (this.brand==="ZARA")
   },
@@ -402,6 +455,8 @@ export default {
   position: absolute;
   left: 45px;
   top: 925px;
+    background-color: rgba(240, 234, 234, 0.62);
+
   height: 500px;
   width: 400px;
 }

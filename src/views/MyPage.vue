@@ -3,21 +3,10 @@
     <h1 style="text-align: center; padding: 70px; font-size: 50px">
       Sustainable Tips
     </h1>
-    <div>
-      <GU />
-    </div>
+
   </div>
 </template>
 
-<script>
-import GU from "@/components/GU.vue"
-
-export default {
-  components: {
-    GU,
-  },
-}
-</script>
 
 <style scoped>
 .my-page {
