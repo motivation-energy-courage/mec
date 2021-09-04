@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
-      <div id="team"><h4>MEC</h4></div>
+    <div id="team"><h4>MEC</h4></div>
     <div class="honbun">
       <div class="introduce">
         <h3 style="text-align: center">
@@ -23,22 +23,23 @@
         <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
         <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
         <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
-       </div>
+      </div>
       <div class="shokai" style="word-spacing: 80px">
-        <h2>①歴史に残る悲劇・ラナプラザ事件について ②エシカルファッションってどんなもの？ ③ファストファッションの裏にある事実
+        <h2>
+          ①歴史に残る悲劇・ラナプラザ事件について
+          ②エシカルファッションってどんなもの？
+          ③ファストファッションの裏にある事実
         </h2>
         <div>
-      <insta />
-    </div>
-
-       </div>
+          <insta />
+        </div>
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-
-import Insta from '../components/Insta.vue'
+import Insta from "../components/Insta.vue"
 
 export default {
   components: {
@@ -51,8 +52,8 @@ export default {
 .home {
   background-image: url(https://cdn.pixabay.com/photo/2016/10/31/02/29/woman-1784755_1280.jpg);
   background-size: cover;
-  background-color:rgba(255,255,255,0.09);
-  background-blend-mode:lighten;
+  background-color: rgba(255, 255, 255, 0.09);
+  background-blend-mode: lighten;
 
   height: 790px;
   width: 100%;
@@ -130,8 +131,7 @@ export default {
 #team {
   font-size: 20px;
   position: absolute;
-  top: 450px;
-  left: 1240px;
+  top: 460px;
   font-family: "Sacramento";
   color: white;
   padding: 1rem 0.5rem;
@@ -156,10 +156,10 @@ iframe {
   width: 430px;
   height: 550px;
   margin: 0px 15px 0px 0px;
-  padding: 10px; 
+  padding: 10px;
 }
 
-.site{
+.site {
   display: flex;
 }
 </style>
