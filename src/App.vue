@@ -1,48 +1,40 @@
 <template>
-  <div class="app">
-    <button v-on:click="postTweet">ツイート</button>
-    <!-- 変更点１ -->
-    <div>
-      <p v-for="tweet in tweets" :key="tweet.id">
-        git
-        {{ tweet.text }}
-      </p>
+
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/quiz">Quiz</router-link>
+
+      <router-link to="/my-page">Sustainable</router-link>
     </div>
+    <router-view />
   </div>
 </template>
 
-<script>
-import firebase from "firebase";
+<style>
+#nav {
+  padding: 25px;
 
-export default {
-  /* 変更点２ */
-  data() {
-    return {
-      tweets: [
-        // こんな感じのデータが入る予定
-        {
-          id: "0GwoGZuhTNhqHQDBeiVW",
-          text: "こんにちは、ツイートの本文です。",
-        },
-      ],
-    };
-  },
-  methods: {
-    postTweet() {
-      const tweet = {
-        text: "こんにちは、ツイートの本文です。",
-      };
-      firebase
-        .firestore()
-        .collection("tweets")
-        .add(tweet)
-        .then((ref) => {
-          this.tweets.push({
-            id: ref.id,
-            ...tweet,
-          });
-        });
-    },
-  },
-};
-</script>
+  text-align: right;
+  font-family: "Baskerville Old Face", serif;
+
+  position: absolute;
+  top: 0%;
+  right: 10px;
+  z-index: 10;
+}
+
+#nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 15px;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
+
