@@ -316,7 +316,7 @@ export default {
           price: "⭐️★★★★",
           id: 0,
           totalnum: "1.0/5.0",
-          envrate: "⭐️⭐️★★★",
+          envrate: "⭐️⭐️⭐️★★",
           laborrate: "⭐️⭐️★★★",
           labornum: "2.0/5.0",
           animalrate: "⭐️⭐️★★★",
