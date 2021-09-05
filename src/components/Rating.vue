@@ -39,28 +39,26 @@
             <div v-on:click="patagonia">Patagonia</div>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div v-on:click="nike">NIKE</div>
-<div class="item4">
-          <br />
-          <div v-on:click="stella">Stella&nbsp;McCartney</div>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <div v-on:click="nasties">No&nbsp;Nasties</div>
-          &nbsp;&nbsp;&nbsp;
-          <div v-on:click="outerknown">Outerknown</div>
-          &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="item4">
+              <br />
+              <div v-on:click="stella">Stella&nbsp;McCartney</div>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <div v-on:click="nasties">No&nbsp;Nasties</div>
+              &nbsp;&nbsp;&nbsp;
+              <div v-on:click="outerknown">Outerknown</div>
+              &nbsp;&nbsp;&nbsp;&nbsp;
 
-
-          <!-- <div class ="item4">
+              <!-- <div class ="item4">
              <br />
             <div v-on:click="stella">Stella&nbsp;McCartney</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div v-on:click="stella">No&nbsp;Nasties</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div v-on:click="stella">Outerknown</div>
             </div> -->
-
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -69,7 +67,6 @@
 // import ZARA from './ZARA.vue'
 
 export default {
-
   methods: {
     // zara専用のページに飛ばす
     zara: function () {
@@ -117,16 +114,17 @@ export default {
         name: "Detail",
         params: {
           brand: "GU",
-          total: "⭐️⭐️⭐️★★",
+          total: "⭐️⭐️★★★",
           location: "JAPAN",
-          price: "⭐️⭐️⭐️★★",
-          id: 0,
+          price: "⭐️★★★★",
+          id: 2,
           totalnum: "2.0/5.0",
-          envrate: "⭐️⭐️⭐️★★",
-          laborrate: "⭐️⭐️⭐️★★",
+          envrate: "⭐️⭐️★★★",
+          envnum: "2.0/5.0",
+          laborrate: "⭐️⭐️★★★",
           labornum: "2.0/5.0",
-          animalrate: "⭐️⭐️⭐️★★",
-          animalnum: "2.0/5.0",
+          animalrate: "？",
+          animalnum: "？/5.0",
           brandpic: require("@/assets/GU.png"),
         },
       })
@@ -139,13 +137,14 @@ export default {
           total: "⭐️★★★★",
           location: "JAPAN",
           price: "⭐️★★★★",
-          id: 0,
+          id: 3,
           totalnum: "1.0/5.0",
-          envrate: "⭐️⭐️★★★",
-          laborrate: "⭐️⭐️★★★",
-          labornum: "2.0/5.0",
-          animalrate: "⭐️⭐️★★★",
-          animalnum: "2.0/5.0",
+          envrate: "⭐️⭐️⭐️★★",
+          envnum: "3.0/5.0",
+          laborrate: "⭐️★★★★",
+          labornum: "1.0/5.0",
+          animalrate: "?",
+          animalnum: "？/5.0",
           brandpic: require("@/assets/しまむら.jpg"),
         },
       })
@@ -157,7 +156,7 @@ export default {
           brand: "H&M",
           total: "⭐️⭐️⭐️★★",
           location: "Sweden",
-          price: "⭐️⭐️⭐️★★",
+          price: "⭐️★★★★",
           id: 0,
           totalnum: "3.0/5.0",
           envrate: "⭐️⭐️⭐️★★",
@@ -195,16 +194,17 @@ export default {
         name: "Detail",
         params: {
           brand: "無印良品",
-          total: "⭐️★★★★",
+          total: "⭐️⭐️⭐️★★",
           location: "JAPAN",
           price: "⭐️★★★★",
-          id: 0,
-          totalnum: "1.0/5.0",
-          envrate: "⭐️⭐️★★★",
+          id: 5,
+          totalnum: "3.0/5.0",
+          envrate: "⭐️⭐️⭐️★★",
+          envnum: "3.0/5.0",
           laborrate: "⭐️⭐️★★★",
           labornum: "2.0/5.0",
-          animalrate: "⭐️⭐️★★★",
-          animalnum: "2.0/5.0",
+          animalrate: "⭐️⭐️⭐️★★",
+          animalnum: "3.0/5.0",
           brandpic: require("@/assets/無印.jpeg"),
         },
       })
@@ -235,7 +235,7 @@ export default {
         params: {
           brand: "PeopleTree",
           total: "⭐️⭐️⭐️⭐️⭐️",
-          location: "JAPAN",
+          location: "United Kingdom",
           price: "⭐️★★★★",
           id: 0,
           totalnum: "5.0/5.0",
@@ -254,16 +254,17 @@ export default {
         name: "Detail",
         params: {
           brand: "Patagonia",
-          total: "⭐️★★★★",
-          location: "JAPAN",
-          price: "⭐️★★★★",
+          total: "⭐️⭐️⭐️⭐️★",
+          location: "United States",
+          price: "⭐️⭐️★★★",
           id: 0,
-          totalnum: "1.0/5.0",
-          envrate: "⭐️⭐️★★★",
-          laborrate: "⭐️⭐️★★★",
-          labornum: "2.0/5.0",
-          animalrate: "⭐️⭐️★★★",
-          animalnum: "2.0/5.0",
+          totalnum: "4.0/5.0",
+          envrate: "⭐️⭐️⭐️⭐️★",
+          envnum: "4.0/5.0",
+          laborrate: "⭐️⭐️⭐️★★",
+          labornum: "3.0/5.0",
+          animalrate: "⭐️⭐️⭐️★★",
+          animalnum: "3.0/5.0",
           brandpic: require("@/assets/patagonia.jpeg"),
         },
       })
@@ -273,12 +274,13 @@ export default {
         name: "Detail",
         params: {
           brand: "NIKE",
-          total: "⭐️★★★★",
-          location: "JAPAN",
-          price: "⭐️★★★★",
+          total: "⭐️⭐️⭐️★★",
+          location: "United States",
+          price: "⭐️⭐️★★★",
           id: 0,
-          totalnum: "1.0/5.0",
-          envrate: "⭐️⭐️★★★",
+          totalnum: "3.0/5.0",
+          envrate: "⭐️⭐️⭐️★★",
+          envnum: "3.0/5.0",
           laborrate: "⭐️⭐️★★★",
           labornum: "2.0/5.0",
           animalrate: "⭐️⭐️★★★",
@@ -292,60 +294,61 @@ export default {
         name: "Detail",
         params: {
           brand: "Stella McCartney",
-          total: "⭐️★★★★",
-          location: "JAPAN",
-          price: "⭐️★★★★",
+          total: "⭐️⭐️⭐️⭐️★",
+          location: "United Kingdom",
+          price: "⭐️⭐️⭐️★★",
           id: 0,
-          totalnum: "1.0/5.0",
-          envrate: "⭐️⭐️★★★",
-          laborrate: "⭐️⭐️★★★",
-          labornum: "2.0/5.0",
-          animalrate: "⭐️⭐️★★★",
-          animalnum: "2.0/5.0",
-          enbratenum: "3.0/5.0",
+          totalnum: "4.0/5.0",
+          envrate: "⭐️⭐️⭐️⭐️★",
+          envnum: "4.0/5.0",
+          laborrate: "⭐️⭐️⭐️★★",
+          labornum: "3.0/5.0",
+          animalrate: "⭐️⭐️⭐️⭐️★",
+          animalnum: "4.0/5.0",
           brandpic: require("@/assets/strella.png"),
         },
       })
     },
     nasties: function () {
-      this.$router.push({name: "Detail",
+      this.$router.push({
+        name: "Detail",
         params: {
           brand: "No Nasties",
-          total: "⭐️★★★★",
-          location: "JAPAN",
-          price: "⭐️★★★★",
+          total: "⭐️⭐️⭐️⭐️⭐️",
+          location: "India",
+          price: "⭐️⭐️★★★",
           id: 0,
-          totalnum: "1.0/5.0",
-          envrate: "⭐️⭐️⭐️★★",
-          laborrate: "⭐️⭐️★★★",
-          labornum: "2.0/5.0",
-          animalrate: "⭐️⭐️★★★",
-          animalnum: "2.0/5.0",
-          enbratenum: "3.0/5.0",
+          totalnum: "5.0/5.0",
+          envrate: "⭐️⭐️⭐️⭐️⭐️",
+          envnum: "5.0/5.0",
+          laborrate: "⭐️⭐️⭐️⭐️⭐️",
+          labornum: "5.0/5.0",
+          animalrate: "⭐️⭐️⭐️⭐️⭐️",
+          animalnum: "5.0/5.0",
           brandpic: require("@/assets/nasties.jpg"),
         },
       })
-      },
-      outerknown: function () {
-        this.$router.push({name: "Detail",
+    },
+    outerknown: function () {
+      this.$router.push({
+        name: "Detail",
         params: {
           brand: "OUTERKNOWN",
-          total: "⭐️★★★★",
-          location: "JAPAN",
-          price: "⭐️★★★★",
+          total: "⭐️⭐️⭐️⭐️★",
+          location: "United States",
+          price: "⭐️⭐️★★★",
           id: 0,
-          totalnum: "1.0/5.0",
-          envrate: "⭐️⭐️★★★",
-          laborrate: "⭐️⭐️★★★",
-          labornum: "2.0/5.0",
-          animalrate: "⭐️⭐️★★★",
-          animalnum: "2.0/5.0",
-          enbratenum: "3.0/5.0",
+          totalnum: "4.0/5.0",
+          envrate: "⭐️⭐️⭐️⭐️⭐️",
+          envnum: "5.0/5.0",
+          laborrate: "⭐️⭐️⭐️⭐️★",
+          labornum: "4.0/5.0",
+          animalrate: "⭐️⭐️⭐️★★",
+          animalnum: "3.0/5.0",
           brandpic: require("@/assets/outerknown.png"),
         },
       })
-      }
-    
+    },
   },
 }
 </script>
@@ -394,7 +397,7 @@ export default {
 
 .item3 {
   position: absolute;
-    text-align: center;
+  text-align: center;
 
   top: 440%;
   display: flex;

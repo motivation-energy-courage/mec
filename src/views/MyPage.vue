@@ -3,10 +3,8 @@
     <h1 style="text-align: center; padding: 70px; font-size: 50px">
       Sustainable Tips
     </h1>
-
   </div>
 </template>
-
 
 <style scoped>
 .my-page {

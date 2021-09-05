@@ -1,6 +1,6 @@
 <template>
   <div class="UNIQLO">
-    <h1 style="color:gray;font-size: 46px;">UNIQLO</h1>
+    <h1 style="color: gray; font-size: 46px">UNIQLO</h1>
     <div class="UNIQLOimage">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPr8zQMixfi1teiVkn67E2qjjMmb-r6B8cQ&usqp=CAU"
@@ -11,7 +11,7 @@
           width="120"
           height="80"
         />
-        <h2 style="font-size:25px;">Total Rating</h2>
+        <h2 style="font-size: 25px">Total Rating</h2>
         <h2>⭐️⭐️⭐️⭐️★</h2>
         <h2>4.0/5.0</h2>
       </div>
@@ -46,9 +46,9 @@
             width="70"
             height="50"
           />
-          <h3 style="line-height: 0px;">Environment Rating</h3>
-          <h4 style="line-height: 10px;">⭐️⭐️⭐️⭐️★</h4>
-          <h4 style="line-height: 8px;">2.0/5.0</h4>
+          <h3 style="line-height: 0px">Environment Rating</h3>
+          <h4 style="line-height: 10px">⭐️⭐️⭐️⭐️★</h4>
+          <h4 style="line-height: 8px">2.0/5.0</h4>
         </div>
         <div class="UNIQLOenvironmentphraze">
           <h4>UNIQLOの環境評価はかなり高く評価できます。<br />なぜならね</h4>
@@ -60,9 +60,9 @@
             width="70"
             height="50"
           />
-          <h3 style="line-height: 0px;">Labor Rating</h3>
-          <h4 style="line-height: 10px;">⭐️⭐️⭐️★★</h4>
-          <h4 style="line-height: 8px;">2.0/5.0</h4>
+          <h3 style="line-height: 0px">Labor Rating</h3>
+          <h4 style="line-height: 10px">⭐️⭐️⭐️★★</h4>
+          <h4 style="line-height: 8px">2.0/5.0</h4>
         </div>
         <div class="UNIQLOlaborphraze">
           <h4>UNIQLOの労働評価はかなり高く評価できます。<br />なぜならね</h4>
@@ -74,9 +74,9 @@
             width="70"
             height="50"
           />
-          <h3 style="line-height: 0px;">Labor Rating</h3>
-          <h4 style="line-height: 10px;">⭐️⭐️⭐️★★</h4>
-          <h4 style="line-height: 8px;">2.0/5.0</h4>
+          <h3 style="line-height: 0px">Labor Rating</h3>
+          <h4 style="line-height: 10px">⭐️⭐️⭐️★★</h4>
+          <h4 style="line-height: 8px">2.0/5.0</h4>
         </div>
         <div class="UNIQLOanimalphraze">
           <h4>UNIQLOの動物評価は比較的高く評価できます。<br />なぜならね</h4>
