@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
-      <div id="team"><h4>MEC</h4></div>
+    <div id="team"><h4>MEC</h4></div>
     <div class="honbun">
       <div class="introduce">
         <h3 style="text-align: center">
@@ -12,37 +12,68 @@
     </div>
     <div class="quiz">
       <h1>Quiz Game</h1>
-      <h3 style="text-align: center">
+      <div class="know" style="text-align: center">
         エシカルファッションについてあなたはどれだけ知っていますか？<br />環境・労働・動物の三つの観点から<br />考えていきましょう。
-      </h3>
-      <h1>Information</h1>
-      <h3 style="text-align: center,font-size: 30px;">
-        エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
-      </h3>
-      <div class="site">
-        <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
-        <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
-        <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
-       </div>
-      <div class="shokai" style="word-spacing: 80px">
-        <h2>①歴史に残る悲劇・ラナプラザ事件について ②エシカルファッションってどんなもの？ ③ファストファッションの裏にある事実
-        </h2>
-        <div>
-      <insta />
+      </div>
+
+      <div class="example-modal-window">
+        <button @click="openModal">開く</button>
+        <!-- コンポーネント MyModal -->
+        <MyModal @close="closeModal" v-if="modal">
+          <!-- default スロットコンテンツ -->
+          <p>問題！</p>
+        </MyModal>
+      </div>
+
+      <div class="quizimage">
+        <img src="@/assets/kannkyou.jpg" width="450" height="400" />
+        <img src="@/assets/animal.jpg" width="450" height="400" />
+        <img src="@/assets/roudou.jpg" width="450" height="400" />
+      </div>
+      <Quiz />
+      <Quiz2 />
     </div>
 
-       </div>
+    <div class="information">
+      <h1>Information</h1>
+    </div>
+
+    <div class="introduce2">
+      エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
+    </div>
+    <div class="example-modal-window">
+      <button @click="openModal">開く</button>
+    </div>
+    <div class="site">
+      <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
+      <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
+      <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
+    </div>
+    <div class="shokai" style="word-spacing: 80px">
+      <h2>
+        ①歴史に残る悲劇・ラナプラザ事件について
+        ②エシカルファッションってどんなもの？
+        ③ファストファッションの裏にある事実
+      </h2>
+      <div>
+        <insta />
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-
-import Insta from '../components/Insta.vue'
+import Insta from "../components/Insta.vue"
+import Quiz from "../components/Quiz.vue"
+import Quiz2 from "../components/Quiz2.vue"
+import MyModal from "./QQuiz.vue"
 
 export default {
   components: {
     Insta,
+    Quiz,
+    Quiz2,
+    MyModal,
   },
 }
 </script>
@@ -51,8 +82,8 @@ export default {
 .home {
   background-image: url(https://cdn.pixabay.com/photo/2016/10/31/02/29/woman-1784755_1280.jpg);
   background-size: cover;
-  background-color:rgba(255,255,255,0.09);
-  background-blend-mode:lighten;
+  background-color: rgba(255, 255, 255, 0.09);
+  background-blend-mode: lighten;
 
   height: 790px;
   width: 100%;
@@ -81,20 +112,33 @@ export default {
 }
 
 .quiz {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  flex-flow: column;
   font-family: "Baskerville Old Face", serif;
-  position: relative; /*絶対配置*/
-  top: 950px;
+  position: relative;
+  top: 1000px;
   text-align: center;
 }
 
 .quiz h1 {
   background-image: url(https://beiz.jp/images_P/pastel/pastel_00054.jpg);
   border-radius: 10px;
-
+  text-align: center;
   width: 270px;
   height: 50px;
-  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.quizimage {
+  display: flex;
+  justify-content: space-around;
+}
+
 #title {
   animation-name: fadeup;
   animation-duration: 10s;
@@ -140,6 +184,53 @@ export default {
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
 }
 
+iframe {
+  width: 430px;
+  height: 550px;
+  margin: 0px 15px 0px 0px;
+  padding: 10px;
+}
+
+.know {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-family: "Baskerville Old Face", serif;
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+
+.know h1 {
+  background-image: url(https://beiz.jp/images_P/pastel/pastel_00054.jpg);
+  border-radius: 10px;
+  align-items: center;
+  width: 270px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.information h1 {
+  background-image: url(https://beiz.jp/images_P/pastel/pastel_00054.jpg);
+  border-radius: 10px;
+  text-align: center;
+  width: 270px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: 1250px;
+}
+
+.introduce2 {
+  display: flex;
+  position: relative;
+  top: 1300px;
+  font-family: "Baskerville Old Face", serif;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .introduce h3 {
   position: absolute; /*絶対配置*/
   top: 760px;
@@ -147,19 +238,16 @@ export default {
 
 .shokai {
   position: absolute;
-  top: 440px;
+  top: 2300px;
   left: 30px;
   font-size: 14px;
+  font-family: "Baskerville Old Face", serif;
+  align-items: center;
 }
 
-iframe {
-  width: 430px;
-  height: 550px;
-  margin: 0px 15px 0px 0px;
-  padding: 10px; 
-}
-
-.site{
+.site {
   display: flex;
+  position: relative;
+  top: 1500px;
 }
 </style>
