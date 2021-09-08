@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
+    <div id="setsumei" style="line-height: 30px">
+      このサイトでは素材の選定、生産、販売までのプロセスで<br />人と地球環境に配慮して作られたファッション＝<br />エシカルファッションについて紹介しています。
+    </div>
     <div id="team"><h4>MEC</h4></div>
     <div class="honbun">
       <div class="introduce">
@@ -54,11 +57,22 @@ export default {
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.09);
   background-blend-mode: lighten;
-
+  animation: zoomIn 3.8s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
   height: 790px;
   width: 100%;
   position: absolute;
   top: 0;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .home h1 {
   font-family: "Baskerville Old Face", serif;
@@ -84,7 +98,7 @@ export default {
 .quiz {
   font-family: "Baskerville Old Face", serif;
   position: relative; /*絶対配置*/
-  top: 950px;
+  top: 550px;
   text-align: center;
 }
 
@@ -95,7 +109,32 @@ export default {
   width: 270px;
   height: 50px;
   margin: 0 auto;
+  animation: SlideIn 6.6s infinite;
 }
+
+@keyframes SlideIn {
+  0% {
+    opacity: 0; /*初期状態では透明に*/
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#setsumei {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+  position: relative;
+  top: 255px;
+  left: 300px;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-family: "Baskerville Old Face", serif;
+}
+
 #title {
   animation-name: fadeup;
   animation-duration: 10s;

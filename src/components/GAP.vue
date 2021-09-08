@@ -1,6 +1,6 @@
 <template>
   <div class="GAP">
-    <h1 style="color:indigo;font-size: 46px;">GAP</h1>
+    <h1 style="color: indigo; font-size: 46px">GAP</h1>
     <div class="GAPimage">
       <img
         src="https://img.buzzfeed.com/buzzfeed-static/static/2020-09/9/10/campaign_images/a536acd031be/zara-2-1537-1599645987-1_dblbig.jpg?resize=1200:*"
@@ -13,7 +13,7 @@
           width="120"
           height="80"
         />
-        <h2 style="font-size:25px;">Total Rating</h2>
+        <h2 style="font-size: 25px">Total Rating</h2>
         <h2>⭐️⭐️★★★</h2>
         <h2>2.0/5.0</h2>
       </div>
@@ -47,9 +47,9 @@
             width="70"
             height="50"
           />
-          <h3 style="line-height: 0px;">Environment Rating</h3>
-          <h4 style="line-height: 10px;">⭐️⭐️★★★</h4>
-          <h4 style="line-height: 8px;">2.0/5.0</h4>
+          <h3 style="line-height: 0px">Environment Rating</h3>
+          <h4 style="line-height: 10px">⭐️⭐️★★★</h4>
+          <h4 style="line-height: 8px">2.0/5.0</h4>
         </div>
         <div class="GAPenvironmentphraze">
           <h4>GAPの環境評価は十分ではありません。<br />なぜならね</h4>
@@ -61,9 +61,9 @@
             width="70"
             height="50"
           />
-          <h3 style="line-height: 0px;">Labor Rating</h3>
-          <h4 style="line-height: 10px;">⭐️⭐️★★★</h4>
-          <h4 style="line-height: 8px;">2.0/5.0</h4>
+          <h3 style="line-height: 0px">Labor Rating</h3>
+          <h4 style="line-height: 10px">⭐️⭐️★★★</h4>
+          <h4 style="line-height: 8px">2.0/5.0</h4>
         </div>
         <div class="GAPlaborphraze">
           <h4>GAPの労働評価は十分ではありません。<br />なぜならね</h4>
@@ -75,9 +75,9 @@
             width="70"
             height="50"
           />
-          <h3 style="line-height: 0px;">Labor Rating</h3>
-          <h4 style="line-height: 10px;">⭐️⭐️★★★</h4>
-          <h4 style="line-height: 8px;">2.0/5.0</h4>
+          <h3 style="line-height: 0px">Labor Rating</h3>
+          <h4 style="line-height: 10px">⭐️⭐️★★★</h4>
+          <h4 style="line-height: 8px">2.0/5.0</h4>
         </div>
         <div class="GAPanimalphraze">
           <h4>GAPの動物評価は十分ではありません。<br />なぜならね</h4>

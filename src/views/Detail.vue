@@ -6,8 +6,7 @@
         {{ this.$route.params.brand }}
       </h1>
       <div class="zaraimage">
-         <img v-bind:src="imgPath" width="320"
-          height="280"/>
+        <img v-bind:src="imgPath" width="320" height="280" />
 
         <div class="comprete">
           <img
@@ -105,9 +104,9 @@
               height="40"
             />
 
-            <h3 style="line-height: 0px">Environment Rating</h3>
+            <h3 style="-height: 0linepx">Environment Rating</h3>
             <h4 style="line-height: 10px">{{ this.$route.params.envrate }}</h4>
-            <h4 style="line-height: 8px">
+            <h4>
               {{ this.$route.params.envnum }}
             </h4>
           </div>
@@ -173,36 +172,43 @@
               height="40"
             /> -->
 
-             <img
-            v-if="animalbadness"
-            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-044.png"
-            width="40"
-            height="40"
-          />
-          <img
-            v-if="animalsadness"
-            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-036.png"
-            width="40"
-            height="40"
-          />
-          <img
-            v-if="animalsoso"
-            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-012.png"
-            width="40"
-            height="40"
-          />
-          <img
-            v-if="animalhappy"
-            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-007.png"
-            width="40"
-            height="40"
-          />
-          <img
-            v-if="animalgreat"
-            src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-013.png"
-            width="40"
-            height="40"
-          />
+            <img
+              v-if="animalbadness"
+              src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-044.png"
+              width="40"
+              height="40"
+            />
+            <img
+              v-if="animalsadness"
+              src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-036.png"
+              width="40"
+              height="40"
+            />
+            <img
+              v-if="animalsoso"
+              src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-012.png"
+              width="40"
+              height="40"
+            />
+            <img
+              v-if="animalhappy"
+              src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-007.png"
+              width="40"
+              height="40"
+            />
+            <img
+              v-if="animalgreat"
+              src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-013.png"
+              width="40"
+              height="40"
+            />
+            <img
+              v-if="animalquestion"
+              src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-040.png"
+              width="40"
+              height="40"
+            />
+
             <h3 style="line-height: 0px">Animal Rating</h3>
             <h4 style="line-height: 10px">
               {{ this.$route.params.animalrate }}
@@ -261,64 +267,97 @@ export default {
       animalhappy: false,
       animalgreat: false,
       imgPath: this.$route.params.brandpic,
+      animalquestion: false,
       texts: [
-        "地球に関して言えば、ザラは私たちから「十分ではない」という評価を得ています。Zaraの親会社であるInditexは、Closing theloopと呼ばれる修復および再利用プログラムを開始しました。このプログラムは、顧客が古着を店内または郵便局から降ろして、セカンドライフを獲得する機会を提供します。これは良い取り組みです。ブランドはリサイクルパッケージも使用しています。しかし、製品を製造する際に繊維の無駄を最小限に抑えるという証拠はありません。また、ザラは自社の事業とサプライチェーンから発生する温室効果ガス排出量を削減するという絶対的な目標を設定していますが、その目標を達成するために順調に進んでいるという証拠はありません。",
-        "ZARAはあああああああああああああ<br>ああああああああああああ",
-        "しまむら",
-        "ザラは再び労働力について「十分ではない」と評価します。生産の最終段階の半分は、労働虐待のリスクが中程度の国であるスペインで行われ、ブランドはファッション透明性指数で51〜60％のスコアを獲得しました。ブランドは、サプライヤーのポリシー、監査、および修復プロセスに関する詳細情報を公開している可能性が高いため、ある程度透明性があります。Zaraはまた、生産の最終段階にあるサプライヤーの詳細なリスト、サプライヤー監査の結果に関する情報、強制労働、男女平等、結社の自由に関する情報も公開しています。また、COVID-19の影響からサプライチェーンのサプライヤーと労働者を保護するためのいくつかのポリシーを開示しています。",
+        "ZARAの環境評価はBADです。良い取り組みから言及すると、Zaraの親会社であるInditexでは、Closing theloopと呼ばれる衣服の再利用プログラムを開始しています。このプログラムにより衣服がセカンドライフを獲得できることに繋がります。また、服の包装にはリサイクルパッケージも使用しています。しかし、ZARAは製品を製造する際に繊維の無駄を最小限に抑える取り組みは取っていません。また、ZARAは自社の事業とサプライチェーンから発生する温室効果ガス排出量を削減するという目標を設定していますが、その目標達成が現時点で順調に進んでいるという実績はありません。",
+        "UNIQLO環境評価は",
+        "GUの環境評価はSo Soです。GUは循環型社会を目指した服のリサイクルや、製造工程において排出される水の量を削減するためのジーンズの取り組みなど自然保護に向けて積極的に取り組んでいる姿勢を見せています。しかし、GHG（温室効果ガス）排出量削減の目標が科学的に公表されていません。また、循環型社会を目指してリサイクルの取り組みを実施していますが、大量生産／消費からの脱却も検討するべきという見解もあります。また、 BCIコットンを使用しているので、よりオーガニックなコットンの使用率を上げる必要性もあると言及できます。",
+        "しまむらの環境評価はSO SOです。循環リサイクルの取り組みや廃棄ゼロを目指していて、その目標に対していくつか具体的に取り組みを行っています。しまむらは「在庫廃棄ゼロ」を達成するためにサプライヤーへ発注した商品は「完全買取」しています。また、発注商品を最後の1枚まで売り切るため、過剰在庫の廃棄（焼却処分）は行っておりません。また「買い物袋のリサイクル」を行っていて、買い物をした顧客に無料で渡した買い物袋を近くの店舗に持ち込むことで、買い物袋1枚あたり1円で回収する取り組みを行なっています。また、回収した買い物袋は、資源としてリサイクルし再利用しています。",
+        "H&M",
+        "無印良品の環境評価はSo Soです。無印良品は2010年に循環型社会の形成に向けてリサイクルのプログラムを導入したり、木や自然の大切さを知ってもらうために独自のキャンプ場を運営するなどの取り組みを行なっています。また、不要な衣料品を回収しリサイクルしたり、残糸を軍手にしたりと、国が先導して動く前から環境保護に対する取り組みを積極的にしています。しかし現時点ではCO2排出量を測定したり、削減するための明確な目標が見受けられない状態です。",
       ],
       textss: [
-        "ザラは再び労働力について「十分ではない」と評価します。生産の最終段階の半分は、労働虐待のリスクが中程度の国であるスペインで行われ、ブランドはファッション透明性指数で51〜60％のスコアを獲得しました。ブランドは、サプライヤーのポリシー、監査、および修復プロセスに関する詳細情報を公開している可能性が高いため、ある程度透明性があります。Zaraはまた、生産の最終段階にあるサプライヤーの詳細なリスト、サプライヤー監査の結果に関する情報、強制労働、男女平等、結社の自由に関する情報も公開しています。また、COVID-19の影響からサプライチェーンのサプライヤーと労働者を保護するためのいくつかのポリシーを開示しています。",
-        "HEllo",
+        "ZARAの労働評価はBADです。ZARAの製造工程の半分は労働虐待のリスクが中程度あるスペインで行われています。ZARAは、サプライヤーのポリシー、監査、および修復プロセスに関する詳細情報を公開しているため、ある程度透明性があります。Zaraはまた、生産の最終段階にあるサプライヤーの詳細なリスト、サプライヤー監査の結果に関する情報、強制労働、男女平等、結社の自由に関する情報も公開しています。しかしサプライチェーン(商品の調達・製造から流通を経て消費者に届くまでのすべての工程)で生活賃金の支払いを保証するという言及がほとんどありません。",
+        "UNIQLOの労働評価は",
+        "GUの労働評価はBADです。GUは労働に関する国際基準の行動規範を公開していますが、工場で働く人に生活賃金を支払っているかは不透明な状態です。日本を本拠とする国際人権NGO「ヒューマンライツ・ナウ」が、アパレル業界の労働環境に関する実態調査を行った結果、ユニクロやユニクロと同じFR社の完全子会社であるGUの下請け工場における労働問題が非常に深刻だという声が聞かれたそうです。これらから、GUはウイグル族の人権問題などに関与している可能性があると言えます。",
+        "しまむらの労働評価はVERY BADです。2018年にしまむらが衣料品を仕入れている取引先の下請け会社で、外国人技能実習生を違法に働かせていることが判明しました。その後、しまむらは全ての取引先に人権侵害がないように通達をしています。しかし、ウェブサイトを見る限りでは、未だに労働環境に対する情報に対する透明性が著しく低く、実際に何を、どう、どのくらい取り組んでいるのか不明瞭な状態であります。また英国の人権団体「Know The Chain」が2020年に世界のアパレル系企業64社を調査したところしまむらは、「何の措置も講じていない」という厳しい評価となりました。",
+        "H&M",
+        "無印良品の労働評価はBADです。英国の人権団体「Know The Chain」が2020年に世界のアパレル系企業64社を調査したところ無印良品を手がける「良品計画」（本社・東京都豊島区）は、下から2番目の「最低限の措置しか講じていない」と評価されました。良品計画はKTCに対し、中国・新疆ウイグル自治区にある工場について、「徹底した調査を行った結果、重大な問題は確認されていない」と報告しましたが、KTCは「『強制労働を特定するための調査は新疆では不可能』とする業界他社や監査機関の指摘と矛盾している」と疑問の目を向けている状態です。",
       ],
       textsss: [
-        "ザラの動物福祉方針は、ファイブ・フリーダムズと連携しており、毛皮、アンゴラ、および動物でテストされた製品の在庫を厳しく禁止しています。残念ながら、ザラはウール、レザー、ダウン、エキゾチックな動物の毛を使用しており、動物製品が生産の最初の段階にまでさかのぼるという証拠はないため、ここでも「不十分」と評価しています。",
+        "ZARAの動物評価はBADです。ZARAの動物福祉方針は、The Five Freedoms for Animal（国際的に認められている動物の福祉基準)と連携しており、毛皮、アンゴラ、および動物でテストされた製品の在庫を厳しく禁止しています。しかし残念ながら、ZARAはウール、レザー、ダウン、エキゾチックな動物の毛を使用していることから、動物繊維が製造工程において少なからず存在すると判断できるため、動物評価においても「不十分」と評価します。",
+        "UNIQLOの動物評価は",
+        "GUは動物福祉に対してのポリシーがないので評価ができません。",
+        "しまむらは動物福祉に対してのポリシーがないので評価ができません。しかし、2014年にリアルファー（毛皮）製品の販売中止を求める約4000人分の署名の受け取りをしまむらが拒否したことは記録に残すべきことでしょう。",
+        "H&M",
+        "無印良品の動物評価はSo Soです。無印良品は公式Webサイトの中で化粧品の動物実験の有無に対して、「化粧品は、化粧品メーカーへの委託製造で作られていますが、既に「効能・効果」と「安全性」が確認されている原料を使用して製造しており、製造段階ではもとより、製品段階での「動物実験」も行なっておりません。」と回答しています。しかし、化粧品以外の商品は動物実験をしているかについての明記はなく、情報開示に対する透明性が低い状態です。",
       ],
     }
   },
   created: function () {
     if (this.total === "⭐️⭐️★★★") {
       this.sadness = true
-    }if (this.total === "⭐️★★★★") {
+    }
+    if (this.total === "⭐️★★★★") {
       this.badness = true
-    }  if (this.total === "⭐️⭐️⭐️★★") {
+    }
+    if (this.total === "⭐️⭐️⭐️★★") {
       this.soso = true
-    }  if (this.total === "⭐️⭐️⭐️⭐️★") {
+    }
+    if (this.total === "⭐️⭐️⭐️⭐️★") {
       this.happy = true
-    }  if (this.total === "⭐️⭐️⭐️⭐️⭐️") {
+    }
+    if (this.total === "⭐️⭐️⭐️⭐️⭐️") {
       this.great = true
-    }  if (this.envrate === "⭐️⭐️★★★") {
+    }
+    if (this.envrate === "⭐️⭐️★★★") {
       this.envsadness = true
-    }  if (this.envrate === "⭐️★★★★") {
+    }
+    if (this.envrate === "⭐️★★★★") {
       this.envbadness = true
-    }  if (this.envrate === "⭐️⭐️⭐️★★") {
+    }
+    if (this.envrate === "⭐️⭐️⭐️★★") {
       this.envsoso = true
-    }  if (this.envrate === "⭐️⭐️⭐️⭐️★") {
+    }
+    if (this.envrate === "⭐️⭐️⭐️⭐️★") {
       this.envhappy = true
-    }  if (this.envrate === "⭐️⭐️⭐️⭐️⭐️") {
-      this.envgreate = true
-    }if (this.laborrate === "⭐️⭐️★★★") {
+    }
+    if (this.envrate === "⭐️⭐️⭐️⭐️⭐️") {
+      this.envgreat = true
+    }
+    if (this.laborrate === "⭐️⭐️★★★") {
       this.laborsadness = true
-    }if (this.laborrate ==="⭐️★★★★") {
+    }
+    if (this.laborrate === "⭐️★★★★") {
       this.laborbadness = true
-    }if (this.laborrate === "⭐️⭐️⭐️★★"){
+    }
+    if (this.laborrate === "⭐️⭐️⭐️★★") {
       this.laborsoso = true
-    }if (this.laborrate === "⭐️⭐️⭐️⭐️★"){
+    }
+    if (this.laborrate === "⭐️⭐️⭐️⭐️★") {
       this.laborhappy = true
-    }if (this.laborrate === "⭐️⭐️⭐️⭐️⭐️"){
+    }
+    if (this.laborrate === "⭐️⭐️⭐️⭐️⭐️") {
       this.laborgreat = true
-    }if (this.animalrate ==="⭐️★★★★"){
+    }
+    if (this.animalrate === "⭐️★★★★") {
       this.animalbadness = true
-    }if (this.animalrate ==="⭐️⭐️★★★"){
+    }
+    if (this.animalrate === "⭐️⭐️★★★") {
       this.animalsadness = true
-    }if (this.animalrate ==="⭐️⭐️⭐️★★"){
-    this.animalsoso = true
-    }if (this.animalrate ==="⭐️⭐️⭐️⭐️★"){
+    }
+    if (this.animalrate === "⭐️⭐️⭐️★★") {
+      this.animalsoso = true
+    }
+    if (this.animalrate === "⭐️⭐️⭐️⭐️★") {
       this.animalhappy = true
-    }if (this.animalrate === "⭐️⭐️⭐️⭐️⭐️"){
+    }
+    if (this.animalrate === "⭐️⭐️⭐️⭐️⭐️") {
       this.animalgreat = true
     }
-    
+    if (this.animalnum === "？/5.0") {
+      this.animalquestion = true
+    }
 
     //  if (this.brand==="ZARA")
   },
@@ -328,7 +367,8 @@ export default {
 <style>
 .zara {
   position: absolute;
-  top: 466px;
+  top: 470px;
+  font-family: "Baskerville Old Face", serif;
 }
 .zaraimage {
   position: relative;
@@ -455,7 +495,7 @@ export default {
   position: absolute;
   left: 45px;
   top: 925px;
-    background-color: rgba(240, 234, 234, 0.62);
+  background-color: rgba(240, 234, 234, 0.62);
 
   height: 500px;
   width: 400px;
