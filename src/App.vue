@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">Rating</router-link>
       <router-link to="/quiz">Quiz</router-link>
 
       <router-link to="/my-page">Sustainable</router-link>
@@ -13,15 +13,16 @@
 
 <style>
 #nav {
-  padding: 25px;
+  padding: 10px;
 
   text-align: right;
   font-family: "Baskerville Old Face", serif;
 
-  position: absolute;
+  position: fixed;
   top: 0%;
   right: 10px;
   z-index: 10;
+  background-color: #111111;
 }
 
 #nav a {

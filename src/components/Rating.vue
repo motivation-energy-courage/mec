@@ -2,59 +2,56 @@
   <div class="about">
     <div class="subtitle">
       <h1 style="text-align: center; padding: 70px; font-size: 50px">Rating</h1>
+
       <div class="brand">
-        <h2 style="text-align: center; padding: 70px; font-size: 34px">
-          Fast Fashion Brand
+        <h2 style="text-align: center; font-size: 34px">
+          &nbsp;Fast Fashion Brand&nbsp;
         </h2>
       </div>
 
       <div class="item">
-        <div v-on:click="zara">ZARA</div>
+        <div class="zarap" v-on:click="zara">ZARA</div>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <div v-on:click="uniqlo">UNIQLO</div>
+        <div class="uniqlop" v-on:click="uniqlo">UNIQLO</div>
         &nbsp;&nbsp;&nbsp;
-        <div v-on:click="gu">GU</div>
+        <div class="gup" v-on:click="gu">GU</div>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <div v-on:click="shimamura">しまむら</div>
+        <div class="shimamurap" v-on:click="shimamura">しまむら</div>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class="item2">
           <br />
-          <div v-on:click="hm">H&M</div>
+          <div class="hmp" v-on:click="hm">H&M</div>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <div v-on:click="gap">GAP</div>
-          &nbsp;&nbsp;&nbsp;
-          <div v-on:click="muji">無印良品</div>
+          <div class="gapp" v-on:click="gap">GAP</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="mujip" v-on:click="muji">無印</div>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <div v-on:click="adidas">adidas</div>
+          <div class="adidasp" v-on:click="adidas">adidas</div>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <div class="brand2">
             <h2 style="text-align: center; font-size: 34px">
-              Ethical Fashion Brand
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ethical Fashion
+              Brand&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </h2>
           </div>
           <div class="item3">
             <br />
-            <div v-on:click="peopletree">PeopleTree</div>
+            <div class="peoplep" v-on:click="peopletree">PeopleTree</div>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div v-on:click="patagonia">Patagonia</div>
+            <div class="patagoniap" v-on:click="patagonia">Patagonia</div>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div v-on:click="nike">NIKE</div>
+            <div class="nikep" v-on:click="nike">NIKE</div>
             <div class="item4">
               <br />
-              <div v-on:click="stella">Stella&nbsp;McCartney</div>
+              <div class="stellap" v-on:click="stella">
+                Stella&nbsp;McCartney
+              </div>
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <div v-on:click="nasties">No&nbsp;Nasties</div>
+              <div class="nastiesp" v-on:click="nasties">No&nbsp;Nasties</div>
               &nbsp;&nbsp;&nbsp;
-              <div v-on:click="outerknown">Outerknown</div>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-
-              <!-- <div class ="item4">
-             <br />
-            <div v-on:click="stella">Stella&nbsp;McCartney</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <div v-on:click="stella">No&nbsp;Nasties</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <div v-on:click="stella">Outerknown</div>
-            </div> -->
+              <div class="outerp" v-on:click="outerknown">Outerknown</div>
             </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
           </div>
         </div>
       </div>
@@ -63,9 +60,6 @@
 </template>
 
 <script>
-// import PeopleTree from "@/components/PeopleTree.vue"
-// import ZARA from './ZARA.vue'
-
 export default {
   methods: {
     // zara専用のページに飛ばす
@@ -97,7 +91,7 @@ export default {
           total: "⭐️⭐️⭐️★★",
           location: "JAPAN",
           price: "⭐️⭐️★★★",
-          id: 0,
+          id: 1,
           totalnum: "3.0/5.0",
           envrate: "⭐️⭐️⭐️★★",
           envnum: "3.0/5.0",
@@ -361,18 +355,51 @@ export default {
   width: 100%;
   position: absolute;
   top: 0;
+  animation: zoomIn 2.8s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
 }
 
-.brand {
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.subtitle h1 {
+  color: black;
+}
+
+.brand h2 {
   color: black;
   text-align: center;
   position: relative;
-  top: 250px;
+  top: 390px;
+  left: 33%;
   font-family: "Baskerville Old Face", serif;
+  background-color: #ffcc99;
+  border: #fff solid 1px;
+  width: 500px;
+  border-radius: 10px;
+  animation: SlideIn 6.6s infinite;
+}
+
+@keyframes SlideIn {
+  0% {
+    opacity: 0; /*初期状態では透明に*/
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .item {
   position: absolute;
-  top: 120%;
+  top: 125%;
   left: 33%;
   display: flex;
   font-size: 30px;
@@ -396,11 +423,11 @@ export default {
 }
 
 .item3 {
-  position: absolute;
+  position: relative;
   text-align: center;
-
-  top: 440%;
+  top: 200px;
   display: flex;
+  left: -460px;
   font-size: 30px;
   font-family: "Baskerville Old Face", serif;
 }
@@ -409,19 +436,129 @@ export default {
   text-align: center;
   position: absolute;
   top: 80px;
+  left: -50px;
   display: flex;
   font-size: 30px;
   font-family: "Baskerville Old Face", serif;
-  right: -170px;
 }
 
 .subtitle h1 {
   color: white;
+  font-family: "Baskerville Old Face", serif;
 }
 
-.brand2 {
+.brand2 h2 {
   position: absolute;
-  top: 70px;
-  left: 50px;
+  top: 100px;
+  left: 10px;
+
+  background-color: #d6ffad;
+  border-radius: 0px;
+  animation: SlideIn 6.6s infinite;
+}
+
+.zarap:hover {
+  color: deeppink;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.uniqlop:hover {
+  color: deeppink;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.gup:hover {
+  color: deeppink;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.shimamurap:hover {
+  color: deeppink;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hmp:hover {
+  color: deeppink;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.gapp:hover {
+  color: deeppink;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.mujip:hover {
+  color: deeppink;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.adidasp:hover {
+  color: deeppink;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.peoplep:hover {
+  color: #66ff00;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.patagoniap:hover {
+  color: #66ff00;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nikep:hover {
+  color: #66ff00;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.stellap:hover {
+  color: #66ff00;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nastiesp:hover {
+  color: #66ff00;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.outerp:hover {
+  color: #66ff00;
+  transform: scale(1.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.howwerate {
+  position: relative;
+  top: -100px;
+  color: black;
+  cursor: pointer;
 }
 </style>
