@@ -1,17 +1,22 @@
 <template>
   <div class="quiztitle">
     <h1>問題</h1>
-
     <div class="quizmondai">
-      <div class="mondaititle">{{ question.title }}</div>
       <div
-        class="btn"
-        v-for="(answer, index) in question.answers"
+        class="mondaititle"
+        v-for="(mondai, index) in question"
         v-bind:key="index"
       >
-        <a v-on:click="hantei(answer.correct)">
-          {{ answer.choice }}
-        </a>
+        {{ mondai.title }}
+        <div
+          class="btn"
+          v-for="(answer, index) in mondai.answers"
+          v-bind:key="index"
+        >
+          <a v-on:click="hantei(answer.correct)">
+            {{ answer.choice }}
+          </a>
+        </div>
       </div>
       <div class="answer">{{ seikaiOrFuseikai }}</div>
     </div>
@@ -23,27 +28,68 @@ export default {
   data() {
     return {
       seikaiOrFuseikai: "",
-      question: {
-        title: "Q.ジーンズ1本作るために何リットルの水が必要になるでしょう？",
-        answers: [
-          {
-            choice: "A．約1,500リットル",
-            correct: false,
-          },
-          {
-            choice: "B．約3,500リットル",
-            correct: true,
-          },
-          {
-            choice: "C．約5,500リットル",
-            correct: false,
-          },
-          {
-            choice: "D．約7,500リットル",
-            correct: false,
-          },
-        ],
-      },
+      question: [
+        {
+          title: "Q.ジーンズ1本作るために何リットルの水が必要になるでしょう？",
+          answers: [
+            {
+              choice: "A．約1,500リットル",
+              correct: false,
+            },
+            {
+              choice: "B．約3,500リットル",
+              correct: true,
+            },
+            {
+              choice: "C．約5,500リットル",
+              correct: false,
+            },
+            {
+              choice: "D．約7,500リットル",
+              correct: false,
+            },
+          ],
+        },
+        {
+          title: "Q．世界には児童労働者はおよそ何人いるでしょう？",
+          answers: [
+            {
+              choice: "A．約680万人",
+              correct: false,
+            },
+            {
+              choice: "B．約6,800万人",
+              correct: false,
+            },
+            {
+              choice: "C．約1億6,800万人",
+              correct: true,
+            },
+          ],
+        },
+        {
+          title:
+            "Q.「可能な限り食べ物・衣服・その他の目的のために、あらゆる形態の動物への残虐行為、動物の搾取を取り入れないようにする生き方」を実践する人を何というでしょう？",
+          answers: [
+            {
+              choice: "A．ピーマン",
+              correct: false,
+            },
+            {
+              choice: "B．ピータン",
+              correct: false,
+            },
+            {
+              choice: "C. ヴィーガン",
+              correct: true,
+            },
+            {
+              choice: "D．ウェルダン",
+              correct: false,
+            },
+          ],
+        },
+      ],
     }
   },
   methods: {
@@ -63,15 +109,16 @@ export default {
 .quiztitle h1 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   color: rgb(43, 41, 41);
   font-family: "Baskerville Old Face", serif;
   background-image: url(https://beiz.jp/images_P/pastel/pastel_00054.jpg);
   border-radius: 10px;
-  width: 270px;
-  height: 50px;
+  /* width: 270px;
+  height: 50px; */
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   position: relative;
   top: 100px;
 }
@@ -84,7 +131,8 @@ export default {
   border-radius: 50%;
   color: #696969;
   position: relative;
-  top: 100px;
+  top: 110px;
+  right: 530px;
   /* border-bottom: 5rem; */
 }
 
@@ -94,7 +142,7 @@ export default {
   justify-content: center;
   align-items: center;
   font-family: "Baskerville Old Face", serif;
-  font-size: 20px;
+  font-size: 17px;
   border-radius: 50%;
   color: black;
   padding-top: 0.5rem;

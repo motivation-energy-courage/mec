@@ -2,36 +2,81 @@
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
     <div id="team"><h4>MEC</h4></div>
-    <div class="honbun">
-      <div class="introduce">
-        <h3 style="text-align: center">
-          エシカルファッションとは、<br />
-          「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
-        </h3>
-      </div>
+    <div class="introduce">
+      <h3 style="text-align: center">
+        エシカルファッションとは、<br />
+        「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
+      </h3>
     </div>
     <div class="quiz">
       <h1>Quiz Game</h1>
       <div class="know" style="text-align: center">
         エシカルファッションについてあなたはどれだけ知っていますか？<br />環境・労働・動物の三つの観点から<br />考えていきましょう。
       </div>
+      <div class="EAL">
+        <p>Environment</p>
+        <p>Labor</p>
+        <p>Animal Right</p>
+      </div>
 
       <div class="example-modal-window">
-        <button @click="openModal">開く</button>
-        <!-- コンポーネント MyModal -->
-        <MyModal @close="closeModal" v-if="modal">
-          <!-- default スロットコンテンツ -->
-          <p>問題！</p>
+        <MyModal @close="closeModal" @next="nextModal" v-if="modal">
+          <div class="modal-title">問題！</div>
+          {{ question[questionOrder].title }}<br />
+
+          <div class="btn">
+            <a v-on:click="hantei(question[questionOrder].answers[0].correct)">
+              {{ question[questionOrder].answers[0].choice }}</a
+            >
+
+            <a v-on:click="hantei(question[questionOrder].answers[1].correct)">
+              {{ question[questionOrder].answers[1].choice }}</a
+            >
+
+            <a v-on:click="hantei(question[questionOrder].answers[2].correct)">
+              {{ question[questionOrder].answers[2].choice }}</a
+            >
+
+            <a v-on:click="hantei(question[questionOrder].answers[3].correct)">
+              {{ question[questionOrder].answers[3].choice }}</a
+            >
+          </div>
+          <div class="quiz-answer">
+            {{ seikaiOrFuseikai }}
+            <br /><br />
+          </div>
+
+          <div class="kaisetsu-btn">
+            <a href="" v-on:click="question[questionOrder].comment[0]">解説</a>
+            {{ question[questionOrder].comment[0] }}
+          </div>
         </MyModal>
       </div>
 
       <div class="quizimage">
-        <img src="@/assets/kannkyou.jpg" width="450" height="400" />
-        <img src="@/assets/animal.jpg" width="450" height="400" />
-        <img src="@/assets/roudou.jpg" width="450" height="400" />
+        <img
+          class="quizimage1"
+          @click="openModal1"
+          src="@/assets/kannkyou.jpg"
+          width="450"
+          height="400"
+        />
+        <img
+          class="quizimage2"
+          @click="openModal2"
+          src="@/assets/roudou.jpg"
+          width="450"
+          height="400"
+        />
+        <img
+          class="quizimage3"
+          @click="openModal3"
+          src="@/assets/animal.jpg"
+          width="450"
+          height="400"
+        />
       </div>
       <Quiz />
-      <Quiz2 />
     </div>
 
     <div class="information">
@@ -41,9 +86,7 @@
     <div class="introduce2">
       エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
     </div>
-    <div class="example-modal-window">
-      <button @click="openModal">開く</button>
-    </div>
+
     <div class="site">
       <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
       <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
@@ -64,16 +107,245 @@
 
 <script>
 import Insta from "../components/Insta.vue"
-import Quiz from "../components/Quiz.vue"
-import Quiz2 from "../components/Quiz2.vue"
+// import Quiz from "../components/Quiz.vue"
 import MyModal from "./QQuiz.vue"
 
 export default {
+  data() {
+    return {
+      questionOrder: 0,
+      modal: false,
+      seikaiOrFuseikai: "",
+      question: [
+        {
+          title: "Q.ジーンズ1本作るために何リットルの水が必要になるでしょう？",
+          comment: "これはなんと人が7年かけて飲む、水の量に相当します！！！",
+          answers: [
+            {
+              choice: " A．約1,500リットル",
+              correct: false,
+            },
+            {
+              choice: " B．約3,500リットル",
+              correct: false,
+            },
+            {
+              choice: " C．約5,500リットル",
+              correct: false,
+            },
+            {
+              choice: " D．約7,500リットル",
+              correct: true,
+            },
+          ],
+        },
+
+        {
+          title:
+            "Q．一年間でアパレル業界から出る服の廃棄量はどれくらいでしょう？",
+          answers: [
+            {
+              choice: "    A．50万着",
+              correct: false,
+            },
+            {
+              choice: "    B．100万着",
+              correct: false,
+            },
+            {
+              choice: "    C．1億着",
+              correct: false,
+            },
+            {
+              choice: "    D．15億着",
+              correct: true,
+            },
+          ],
+          comment:
+            "一年間に約29億着生産されますが、そのおよそ半分は廃棄処分されている現状です😭⚡️",
+        },
+        {
+          title: "Q．ファストファッションの問題点はどれでしょう？",
+          answers: [
+            {
+              choice: " A．廃棄物の量が多い",
+              correct: true,
+            },
+            {
+              choice: " B．発展途上国での劣悪な労働環境",
+              correct: true,
+            },
+            {
+              choice: " C. 有害物質による環境被害",
+              correct: true,
+            },
+            {
+              choice: " D.トレンドアイテムのコピー問題 ",
+              correct: true,
+            },
+          ],
+          comment: "これは全て正解です！いじわる問題でした！！",
+        },
+        {
+          title: "Q．世界には児童労働者はおよそ何人いるでしょう？",
+          answers: [
+            {
+              choice: "A．約680万人",
+              correct: false,
+            },
+            {
+              choice: "B．約6,800万人",
+              correct: false,
+            },
+            {
+              choice: "C．約1億6,800万人",
+              correct: true,
+            },
+          ],
+          comment:
+            "この約1億6,800万人の中で、およそ98％もの労働者が生活を賄うのに十分とされる推定賃金（生活賃金）をもらえていないのが現状です。家計が苦しいため、危険な仕事にもかかわらず劣悪な環境で働かなければならず、多くの子供たちが教育を受ける権利を侵害されているのです。",
+        },
+        {
+          title:
+            "Q．2013年に大規模な縫製工場のビルが崩壊し、死者1138人、負傷者2500人以上を生んだ深刻な事件を何事件というでしょう？",
+          answers: [
+            {
+              choice: "A．ラナプラザ事件",
+              correct: true,
+            },
+            {
+              choice: "B．ラナナプラザ事件",
+              correct: false,
+            },
+            {
+              choice: "C. ラッナプラザ事件",
+              correct: false,
+            },
+          ],
+          comment: "サイトの下にも詳しく書いてありますので、ぜひご覧ください！",
+        },
+        {
+          title: "Q．ラナプラザ事件は、どこの国で起こったでしょうか？",
+          answers: [
+            {
+              choice: "A．バングラデシュ",
+              correct: true,
+            },
+            {
+              choice: "B．インド",
+              correct: false,
+            },
+            {
+              choice: "C. ミャンマー",
+              correct: false,
+            },
+          ],
+        },
+        {
+          title: "Q．日本には毛皮製造工場がいくつあるでしょう？",
+          answers: [
+            {
+              choice: "A．0",
+              correct: true,
+            },
+            {
+              choice: "B．10",
+              correct: false,
+            },
+            {
+              choice: "C. 100",
+              correct: false,
+            },
+          ],
+        },
+        {
+          title:
+            "Q．環境負荷の少ない人工レザーのうち、当てはまらないものはどれでしょう？",
+          answers: [
+            {
+              choice: "A．パイナップル",
+              correct: false,
+            },
+            {
+              choice: "B．ワイン",
+              correct: false,
+            },
+            {
+              choice: "C. コーヒー",
+              correct: false,
+            },
+            {
+              choice: "D. お茶",
+              correct: true,
+            },
+          ],
+          comment:
+            "レザー製品を作るにあたって、「クロムなめし」と呼ばれる、動物の皮の毛や汚れを落として柔らかくする工程が、化学製品を使うため環境汚染の観点から問題視されている。選択肢のパイナップル、ワイン、コーヒーの他にも、ぶどう、きのこ、トウモロコシ、りんごの皮、サボテン、ココナッツを使った人工レザーの製品があります！",
+        },
+        {
+          title:
+            "Q．「可能な限り食べ物・衣服・その他の目的のために、あらゆる形態の動物への残虐行為、動物の搾取を取り入れないようにする生き方」を実践する人を何というでしょう？",
+          answers: [
+            {
+              choice: "A．ピーマン",
+              correct: false,
+            },
+            {
+              choice: "B．ピータン",
+              correct: false,
+            },
+            {
+              choice: "C. ヴィーガン",
+              correct: true,
+            },
+            {
+              choice: "D．ウェルダン",
+              correct: false,
+            },
+          ],
+          comment:
+            "ヴィーガンは食生活においても日常生活においても「動物から得るモノ」全てを口にせず、使いません！肉、魚だけではなく、卵、乳、蜂蜜も摂取しません!",
+        },
+      ],
+    }
+  },
   components: {
     Insta,
-    Quiz,
-    Quiz2,
+    // Quiz,
     MyModal,
+  },
+  methods: {
+    hantei(answer) {
+      // 正解不正解を判定する
+      if (answer) {
+        this.seikaiOrFuseikai = "⭕️正解"
+      } else {
+        this.seikaiOrFuseikai = "✖️不正解"
+      }
+    },
+    openModal1() {
+      this.modal = true
+    },
+    openModal2() {
+      this.modal = true
+    },
+    openModal3() {
+      this.modal = true
+    },
+    closeModal() {
+      this.modal = false
+    },
+    nextModal() {
+      if (this.questionOrder == 3) {
+        this.modal = false
+      } else if (this.questionOrder == 6) {
+        this.madal = false
+      } else {
+        this.modal = false
+        this.questionOrder += 1
+        this.modal = true
+      }
+    },
   },
 }
 </script>
@@ -114,7 +386,7 @@ export default {
 .quiz {
   display: flex;
   /* align-items: center; */
-  justify-content: space-between;
+  /* justify-content: center; */
   flex-flow: column;
   font-family: "Baskerville Old Face", serif;
   position: relative;
@@ -128,15 +400,44 @@ export default {
   text-align: center;
   width: 270px;
   height: 50px;
-  position: relative;
+  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+}
+
+.EAL {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
 }
 
 .quizimage {
   display: flex;
   justify-content: space-around;
+}
+
+.quizimage1:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+.quizimage2:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+.quizimage3:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+.quiz-answer {
+  /* padding-top: 100px; */
+  font-size: 1.5rem;
+  color: #696969;
 }
 
 #title {
@@ -198,6 +499,7 @@ iframe {
   align-items: center;
   font-family: "Baskerville Old Face", serif;
   font-size: 20px;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -221,6 +523,11 @@ iframe {
   top: 1250px;
 }
 
+.introduce h3 {
+  position: absolute; /*絶対配置*/
+  top: 780px;
+}
+
 .introduce2 {
   display: flex;
   position: relative;
@@ -231,14 +538,10 @@ iframe {
   align-items: center;
   text-align: center;
 }
-.introduce h3 {
-  position: absolute; /*絶対配置*/
-  top: 760px;
-}
 
 .shokai {
   position: absolute;
-  top: 2300px;
+  top: 2150px;
   left: 30px;
   font-size: 14px;
   font-family: "Baskerville Old Face", serif;
@@ -249,5 +552,72 @@ iframe {
   display: flex;
   position: relative;
   top: 1500px;
+}
+
+.modal-title {
+  font-size: 20px;
+  padding-bottom: 1rem;
+  padding-top: 0rem;
+}
+
+.btn {
+  width: 100％;
+  height: 100％;
+  line-height: 35px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  /* padding-left: 70px; */
+}
+.btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background: #ffffff;
+  text-align: center;
+  color: #696969;
+  font-size: 20px;
+  box-shadow: 3px 3px 0px 0px #d3d3d3;
+  text-align: left;
+  justify-content: center;
+}
+.btn a:hover {
+  background: #fffacd;
+  color: #696969;
+  margin-left: 3px;
+  margin-top: 3px;
+  box-shadow: none;
+}
+
+.kaisetsu-btn {
+  width: 70px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 150px;
+}
+.kaisetsu-btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background: #ffffff;
+  text-align: center;
+  border: 2px solid #e3e3e3;
+  color: #666666;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 1px 1px 6px 0px #ffffff inset;
+  transition: all 0.5s ease;
+}
+.kaisetsu-btn a:hover {
+  background: #f5f5f5;
+  color: #8a8a8a;
+  margin-left: 0px;
+  margin-top: 0px;
+  border: 2px solid #dedede;
+  box-shadow: none;
 }
 </style>

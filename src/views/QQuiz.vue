@@ -1,17 +1,23 @@
 <template>
   <transition name="modal" appear>
     <div class="modal modal-overlay" @click.self="$emit('close')">
+      <!-- <div class="modal modal-overlay" @click.self="$emit('next')">
+        <div class="modal modal-overlay" @click.self="$emit('commentary')"> -->
       <div class="modal-window">
         <div class="modal-content">
           <slot />
         </div>
         <footer class="modal-footer">
           <slot name="footer">
-            <button @click="$emit('close')">Close</button>
+            <button @click="$emit('close')">閉じる</button>
+            <!-- <button @click="$emit('commentary')">解説</button> -->
+            <button @click="$emit('next')">次の問題へ</button>
           </slot>
         </footer>
       </div>
     </div>
+    <!-- </div>
+    </div> -->
   </transition>
 </template>
 
@@ -37,13 +43,16 @@
   }
 
   &-content {
-    padding: 10px 20px;
+    padding: 100px 50px;
   }
 
   &-footer {
-    background: #ccc;
+    background: #e5e2df;
     padding: 10px;
-    text-align: right;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
