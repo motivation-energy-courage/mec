@@ -53,11 +53,13 @@
           <h4 style="line-height: 8px">2.0/5.0</h4>
         </div>
         <div class="zaraenvironmentphraze">
+
           <h4 style="line-height: 40px">
             GUの環境評価はSo Soです。<br />循環型社会を目指した服のリサイクルに取り組んでいます。排水量を削減するためのジーンズの取り組みなど自然保護に取り組んでいる。GHG排出量削減の目標を科学的に公表してほしい。
             循環型社会を目指してリサイクルの取り組みを実施しているが、大量生産／消費からの脱却も検討してほしい。
             BCIコットンを使用しているが、オーガニックコットンの比率を上げる必要がある。
           </h4>
+
         </div>
 
         <div class="zaralaborrate">
@@ -71,9 +73,11 @@
           <h4 style="line-height: 8px">1.0/5.0</h4>
         </div>
         <div class="zaralaborphraze">
+
           <h4 style="line-height: 40px">
             GUの労働評価は十分ではありません。<br />国際基準の行動規範を公開しているが、<br />工場で働く人に生活賃金が支払われている証拠がない。ウイグル問題などに関与している可能性がある。
           </h4>
+
         </div>
 
         <div class="guanimalrate">
@@ -84,9 +88,11 @@
             height="40"
           />
           <h3 style="line-height: 0px">Animal Rating</h3>
+
           <h4 style="line-height: 10px"></h4>
           <h4 style="line-height: 8px">？/5.0</h4>
           動物福祉に対してのポリシーがない。
+
         </div>
         <div class="guanimalphraze">
           <h4></h4>

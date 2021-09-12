@@ -1,7 +1,9 @@
 <template>
   <div>
     <Rating />
+
     <Howwerate />
+
   </div>
 </template>
 
