@@ -27,7 +27,7 @@
         <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
         <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
       </div>
-      <div class="shokai" style="word-spacing: 80px">
+      <div class="shokai" style="word-spacing: 70px">
         <h2>
           ①歴史に残る悲劇・ラナプラザ事件について
           ②エシカルファッションってどんなもの？
@@ -181,12 +181,12 @@ export default {
 
 .introduce h3 {
   position: absolute; /*絶対配置*/
-  top: 760px;
+  top: 780px;
 }
 
 .shokai {
   position: absolute;
-  top: 440px;
+  top: 420px;
   left: 30px;
   font-size: 14px;
 }
