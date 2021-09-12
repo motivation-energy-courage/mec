@@ -3,7 +3,7 @@
     <div class="donyu">
       <h10 style="text-align: center; font-size: 0px">lp </h10>
       <div class="hello">
-        <h1>How we rate?</h1>
+        <h1>How we rate?</h1></div>
         <div class="goodonyou">
           <h4 style="line-height: 45px">
             このサイトは、オーストラリアの慈善団体 Ethical Consumers
@@ -14,38 +14,34 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
 .howwerate {
-  position: absolute;
-  top: 1150px;
+  position: relative;
+  top: 600px;
 }
 
 .donyu {
   position: relative;
-  top: 30px;
-  left: 130px;
+  text-align: center;
+  top: 40px;
   z-index: 300;
-  padding: 1rem 0.5rem;
   font-size: 25px;
   line-height: 0.85em;
   color: #fff;
-  padding: 20px;
-
   background-image: url(https://beiz.jp/images_P/sky/sky_00031.jpg);
-  width: 1150px;
+  width: 1050px;
   height: 500px;
   border: 2px solid;
   background-size: cover;
   border-radius: 60px;
+  margin-left: 1em;
 }
 
 .hello {
   position: relative;
   top: 40px;
-  right: -70px;
   color: color;
   animation: SlideIn 12.6s infinite;
 }

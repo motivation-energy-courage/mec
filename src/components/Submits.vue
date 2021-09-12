@@ -159,7 +159,7 @@ export default {
 #picturee {
   position: absolute;
   top: 350px;
-  right: 47%;
+  right: 42%;
 }
 
 #shosai {
