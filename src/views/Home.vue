@@ -1,18 +1,12 @@
 <template>
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
-
-    <div id="setsumei" style="line-height: 30px">
-      このサイトでは素材の選定、生産、販売までのプロセスで<br />人と地球環境に配慮して作られたファッション＝<br />エシカルファッションについて紹介しています。
-    </div>
     <div id="team"><h4>MEC</h4></div>
-    <div class="honbun">
-      <div class="introduce">
-        <h3 style="text-align: center">
-          エシカルファッションとは、<br />
-          「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
-        </h3>
-      </div>
+    <div class="introduce">
+      <h3 style="text-align: center">
+        エシカルファッションとは、<br />
+        「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
+      </h3>
     </div>
     <div class="quiz">
       <h1>Quiz Game</h1>
@@ -84,7 +78,7 @@
           height="400"
         />
       </div>
-      <!-- <Quiz /> -->
+      <Quiz />
     </div>
 
     <div class="information">
@@ -94,12 +88,13 @@
     <div class="introduce2">
       エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
     </div>
+
     <div class="site">
       <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
       <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
       <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
     </div>
-    <div class="shokai" style="word-spacing: 70px">
+    <div class="shokai" style="word-spacing: 80px">
       <h2>
         ①歴史に残る悲劇・ラナプラザ事件について
         ②エシカルファッションってどんなもの？
@@ -114,7 +109,6 @@
 
 <script>
 import Insta from "../components/Insta.vue"
-
 // import Quiz from "../components/Quiz.vue"
 import MyModal from "./QQuiz.vue"
 
@@ -235,11 +229,11 @@ export default {
               correct: false,
             },
             {
-              choice: "C. ラッナプラザ事件",
+              choice: "C．ラッナプラザ事件",
               correct: false,
             },
             {
-              choice: "D. ラナブラサ事件",
+              choice: "D．ラナブラサ事件",
               correct: false,
             },
           ],
@@ -256,11 +250,11 @@ export default {
               correct: false,
             },
             {
-              choice: "C. ミャンマー",
+              choice: "C．ミャンマー",
               correct: false,
             },
             {
-              choice: "D. ネパール",
+              choice: "D．ネパール",
               correct: false,
             },
           ],
@@ -279,11 +273,11 @@ export default {
               correct: false,
             },
             {
-              choice: "C.50 ",
+              choice: "C．50 ",
               correct: false,
             },
             {
-              choice: "D.100 ",
+              choice: "D．100 ",
               correct: false,
             },
           ],
@@ -304,11 +298,11 @@ export default {
               correct: false,
             },
             {
-              choice: "C. コーヒー",
+              choice: "C．コーヒー",
               correct: false,
             },
             {
-              choice: "D. お茶",
+              choice: "D．お茶",
               correct: true,
             },
           ],
@@ -329,7 +323,7 @@ export default {
               correct: false,
             },
             {
-              choice: "C. ヴィーガン",
+              choice: "C．ヴィーガン",
               correct: true,
             },
             {
@@ -412,23 +406,10 @@ export default {
   background-color: rgba(255, 255, 255, 0.09);
   background-blend-mode: lighten;
 
-  animation: zoomIn 3.8s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-
   height: 790px;
   width: 100%;
   position: absolute;
   top: 0;
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 .home h1 {
   font-family: "Baskerville Old Face", serif;
@@ -457,10 +438,8 @@ export default {
   /* justify-content: center; */
   flex-flow: column;
   font-family: "Baskerville Old Face", serif;
-
   position: relative;
   top: 1000px;
-
   text-align: center;
 }
 
@@ -475,7 +454,6 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  animation: SlideIn 6.6s infinite;
 }
 
 .EAL {
@@ -509,28 +487,6 @@ export default {
   /* padding-top: 100px; */
   font-size: 1.5rem;
   color: #696969;
-  @keyframes SlideIn {
-    0% {
-      opacity: 0; /*初期状態では透明に*/
-      transform: translateX(64px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-}
-
-#setsumei {
-  font-size: 18px;
-  color: #fff;
-  text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
-  position: relative;
-  top: 255px;
-  left: 300px;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  font-family: "Baskerville Old Face", serif;
 }
 
 #title {
@@ -554,27 +510,25 @@ export default {
   color: #fff;
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
 }
-@keyframes fadeup {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 #team {
   font-size: 20px;
   position: absolute;
-  top: 460px;
+  top: 450px;
+  left: 1240px;
   font-family: "Sacramento";
   color: white;
   padding: 1rem 0.5rem;
   line-height: 0.85em;
   color: #fff;
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+}
+
+iframe {
+  width: 430px;
+  height: 550px;
+  margin: 0px 15px 0px 0px;
+  padding: 10px;
 }
 
 .know {
@@ -626,9 +580,7 @@ export default {
 
 .shokai {
   position: absolute;
-
   top: 2150px;
-
   left: 30px;
   font-size: 14px;
   font-family: "Baskerville Old Face", serif;
@@ -653,12 +605,11 @@ export default {
   line-height: 35px;
   padding-top: 2rem;
   padding-bottom: 1rem;
-  padding-left: 125px;
 }
 .btn a {
-  display: block;
-  width: 70%;
-  height: 70%;
+  display: flex;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   background: #ffffff;
   text-align: center;
@@ -666,7 +617,6 @@ export default {
   font-size: 20px;
   box-shadow: 3px 3px 0px 0px #d3d3d3;
   text-align: left;
-  justify-content: center;
 }
 .btn a:hover {
   background: #fffacd;
@@ -688,7 +638,7 @@ export default {
   width: 70px;
   height: 50px;
   line-height: 50px;
-  padding-left: 215px;
+  padding-left: 150px;
 }
 .kaisetsu-btn a {
   display: block;
@@ -718,15 +668,5 @@ export default {
 
 .active {
   display: none;
-}
-
-iframe {
-  width: 430px;
-  height: 550px;
-  margin: 0px 15px 0px 0px;
-  padding: 10px;
-}
-.site {
-  display: flex;
 }
 </style>
