@@ -78,7 +78,6 @@
           height="400"
         />
       </div>
-      <Quiz />
     </div>
 
     <div class="information">
@@ -94,7 +93,7 @@
       <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
       <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
     </div>
-    <div class="shokai" style="word-spacing: 80px">
+    <div class="shokai">
       <h2>
         ①歴史に残る悲劇・ラナプラザ事件について
         ②エシカルファッションってどんなもの？
@@ -498,7 +497,7 @@ export default {
   position: absolute;
 
   top: 20%;
-  left: 10%;
+  left: 30%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -580,8 +579,8 @@ iframe {
 
 .shokai {
   position: absolute;
-  top: 2150px;
-  left: 30px;
+  top: 2100px;
+  left: 150px;
   font-size: 14px;
   font-family: "Baskerville Old Face", serif;
   align-items: center;
@@ -589,8 +588,11 @@ iframe {
 
 .site {
   display: flex;
+  display: flex;
   position: relative;
   top: 1500px;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-title {
