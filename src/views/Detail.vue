@@ -104,9 +104,9 @@
               height="40"
             />
 
-            <h3 style="-height: 0linepx">Environment Rating</h3>
-            <h4 style="line-height: 10px">{{ this.$route.params.envrate }}</h4>
-            <h4>
+            <h3 style="line-height: 50px">Environment Rating</h3>
+            <h4 style="line-height: 0px">{{ this.$route.params.envrate }}</h4>
+            <h4 style="line-height: 50px">
               {{ this.$route.params.envnum }}
             </h4>
           </div>
@@ -152,11 +152,11 @@
             width="40"
             height="40"
           /> -->
-            <h3 style="line-height: 0px">Labor Rating</h3>
-            <h4 style="line-height: 10px">
+            <h3 style="line-height: 50px">Labor Rating</h3>
+            <h4 style="line-height: 0px">
               {{ this.$route.params.laborrate }}
             </h4>
-            <h4 style="line-height: 8px">{{ this.$route.params.labornum }}</h4>
+            <h4 style="line-height: 50px">{{ this.$route.params.labornum }}</h4>
           </div>
           <div class="zaralaborphraze">
             <h4 style="line-height: 40px">
@@ -209,11 +209,13 @@
               height="40"
             />
 
-            <h3 style="line-height: 0px">Animal Rating</h3>
-            <h4 style="line-height: 10px">
+            <h3 style="line-height: 50px">Animal Rating</h3>
+            <h4 style="line-height: 0px">
               {{ this.$route.params.animalrate }}
             </h4>
-            <h4 style="line-height: 8px">{{ this.$route.params.animalnum }}</h4>
+            <h4 style="line-height: 50px">
+              {{ this.$route.params.animalnum }}
+            </h4>
           </div>
           <div class="zaraanimalphraze">
             <h4 style="line-height: 40px">
@@ -367,7 +369,7 @@ export default {
 <style>
 .zara {
   position: absolute;
-  top: 470px;
+  top: 495px;
   font-family: "Baskerville Old Face", serif;
 }
 .zaraimage {
@@ -523,7 +525,7 @@ export default {
 
 .box {
   position: absolute;
-  top: 340px;
+  top: 350px;
   right: 370px;
   padding: 0.5em 1em;
   margin: 2em 0;

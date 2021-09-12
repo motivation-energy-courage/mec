@@ -14,7 +14,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class="uniqlop" v-on:click="uniqlo">UNIQLO</div>
         &nbsp;&nbsp;&nbsp;
-        <div class="gup" v-on:click="gu">GU</div>
+        <div id="mujip" v-on:click="muji">無印良品</div>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class="shimamurap" v-on:click="shimamura">しまむら</div>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -24,7 +24,7 @@
           &nbsp;&nbsp;&nbsp;&nbsp;
           <div class="gapp" v-on:click="gap">GAP</div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <div class="mujip" v-on:click="muji">無印</div>
+          <div class="gup" v-on:click="gu">GU</div>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <div class="adidasp" v-on:click="adidas">adidas</div>
           &nbsp;&nbsp;&nbsp;&nbsp;
@@ -499,7 +499,7 @@ export default {
   cursor: pointer;
 }
 
-.mujip:hover {
+#mujip:hover {
   color: deeppink;
   transform: scale(1.3);
   transition: 0.3s;
