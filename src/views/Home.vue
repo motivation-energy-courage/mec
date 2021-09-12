@@ -1,12 +1,20 @@
 <template>
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
+
+
+    <div id="setsumei" style="line-height: 30px">
+      このサイトでは素材の選定、生産、販売までのプロセスで<br />人と地球環境に配慮して作られたファッション＝<br />エシカルファッションについて紹介しています。
+    </div>
     <div id="team"><h4>MEC</h4></div>
-    <div class="introduce">
-      <h3 style="text-align: center">
-        エシカルファッションとは、<br />
-        「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
-      </h3>
+    <div class="honbun">
+      <div class="introduce">
+        <h3 style="text-align: center">
+          エシカルファッションとは、<br />
+          「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
+        </h3>
+      </div>
+
     </div>
     <div class="quiz">
       <h1>Quiz Game</h1>
@@ -83,25 +91,26 @@
 
     <div class="information">
       <h1>Information</h1>
+
     </div>
 
     <div class="introduce2">
       エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
     </div>
+      <div class="site">
+        <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
+        <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
+        <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
+      </div>
+      <div class="shokai" style="word-spacing: 80px">
+        <h2>
+          ①歴史に残る悲劇・ラナプラザ事件について
+          ②エシカルファッションってどんなもの？
+          ③ファストファッションの裏にある事実
+        </h2>
+        <div>
+          <insta />
 
-    <div class="site">
-      <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
-      <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
-      <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
-    </div>
-    <div class="shokai" style="word-spacing: 80px">
-      <h2>
-        ①歴史に残る悲劇・ラナプラザ事件について
-        ②エシカルファッションってどんなもの？
-        ③ファストファッションの裏にある事実
-      </h2>
-      <div>
-        <insta />
       </div>
     </div>
   </div>
@@ -109,6 +118,7 @@
 
 <script>
 import Insta from "../components/Insta.vue"
+
 // import Quiz from "../components/Quiz.vue"
 import MyModal from "./QQuiz.vue"
 
@@ -406,10 +416,23 @@ export default {
   background-color: rgba(255, 255, 255, 0.09);
   background-blend-mode: lighten;
 
+  animation: zoomIn 3.8s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+
   height: 790px;
   width: 100%;
   position: absolute;
   top: 0;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .home h1 {
   font-family: "Baskerville Old Face", serif;
@@ -438,8 +461,10 @@ export default {
   /* justify-content: center; */
   flex-flow: column;
   font-family: "Baskerville Old Face", serif;
+
   position: relative;
   top: 1000px;
+
   text-align: center;
 }
 
@@ -454,6 +479,7 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  animation: SlideIn 6.6s infinite;
 }
 
 .EAL {
@@ -487,6 +513,27 @@ export default {
   /* padding-top: 100px; */
   font-size: 1.5rem;
   color: #696969;
+@keyframes SlideIn {
+  0% {
+    opacity: 0; /*初期状態では透明に*/
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#setsumei {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+  position: relative;
+  top: 255px;
+  left: 300px;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-family: "Baskerville Old Face", serif;
 }
 
 #title {
@@ -524,8 +571,7 @@ export default {
 #team {
   font-size: 20px;
   position: absolute;
-  top: 450px;
-  left: 1240px;
+  top: 460px;
   font-family: "Sacramento";
   color: white;
   padding: 1rem 0.5rem;
@@ -596,6 +642,7 @@ iframe {
   font-family: "Baskerville Old Face", serif;
   align-items: center;
 }
+
 
 .site {
   display: flex;
@@ -680,5 +727,16 @@ iframe {
 
 .active {
   display: none;
+
+iframe {
+  width: 430px;
+  height: 550px;
+  margin: 0px 15px 0px 0px;
+  padding: 10px;
+}
+
+.site {
+  display: flex;
+
 }
 </style>
