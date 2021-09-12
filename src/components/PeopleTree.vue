@@ -19,7 +19,9 @@
         <h2>5.0/5.0</h2>
       </div>
       <div class="box">
+
         <h3>Location:England<br />Price:⭐️⭐️</h3>
+
       </div>
       <div class="zaraconcrete">
         <img
@@ -53,10 +55,11 @@
           <h4 style="line-height: 8px">5.0/5.0</h4>
         </div>
         <div class="zaraenvironmentphraze">
+
           <h4 style="line-height: 40px">
             PeopleTreeの環境評価はGreatです。<br />Global Organic Textile
             Standard（GOTS）<br />コットンなど、環境にやさしい素材をほとんど<br />の製品で使用しています。<br />また、すべての製品に影響の少ない無毒の<br />染料を使用しています。<br />環境にやさしい素材を使用しているため、<br />生産に使用される化学物質、水、廃水の<br />量を制限することに成功しています。
-          </h4>
+
         </div>
 
         <div class="zaralaborrate">
@@ -70,11 +73,13 @@
           <h4 style="line-height: 8px">5.0/5.0</h4>
         </div>
         <div class="zaralaborphraze">
+
           <h4 style="line-height: 40px">
             PeopleTreeの労働評価はGreatです。<br />PeopleTreeの製品のほとんどは、Global
             Organic Textile Standard（GOTS）またはFairtrade International-Small
             ProducersOrganisationsといった環境負荷よって認定されています。それはWFTO保証システムのメンバーです。<br />それは、そのサプライチェーンのほとんどで生活賃金の支払いを保証します。サプライチェーンのすべてを追跡します。
           </h4>
+
         </div>
 
         <div class="zaraanimalrate">
@@ -84,6 +89,7 @@
             height="40"
           />
           <h3 style="line-height: 0px">Animal Rating</h3>
+
           <h4 style="line-height: 10px">⭐️⭐️⭐️⭐️</h4>
           <h4 style="line-height: 8px">4.0/5.0</h4>
         </div>
@@ -91,6 +97,7 @@
           <h4 style="line-height: 40px">
             PeopleTreeの動物評価はGoodです。<br />毛皮、革、羽毛、エキゾチックな動物の皮、エキゾチックな動物の毛、アンゴラは使用していません。<br />それは、ミュールシングされていない羊から<br />羊毛を調達していると述べています。
           </h4>
+
         </div>
       </div>
     </div>
