@@ -42,8 +42,9 @@
       <img class="used" src="@/assets/古着回収.jpeg" width="150" height="100" />
     </div>
 
-
-    <Submit />
+    <div class="submit">
+      <Submit />
+    </div>
   </div>
 </template>
 
@@ -59,7 +60,6 @@ export default {
     Modal2,
     Modal3,
     Submit,
-
   },
 }
 </script>
@@ -104,8 +104,6 @@ export default {
   border-radius: 30px;
 }
 
-
-
 .baloon2 {
   animation: wobbling_x 0.5s ease-in-out infinite alternate,
     wobbling_y 0.8s ease-in-out infinite alternate;
@@ -124,7 +122,7 @@ export default {
 
 .baloon3 {
   animation: wobbling_x 0.7s ease-in-out infinite alternate,
-  wobbling_y 1.2s ease-in-out infinite alternate;
+    wobbling_y 1.2s ease-in-out infinite alternate;
   z-index: 10;
   transition-duration: 0.5s; /*変化の時間*/
   position: relative;
@@ -173,5 +171,9 @@ export default {
   font-family: "Baskerville Old Face", serif;
 }
 
-
+.submit {
+  position: relative;
+  top: -200px;
+  margin: 10px auto;
+}
 </style>

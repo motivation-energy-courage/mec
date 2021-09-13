@@ -16,7 +16,7 @@
               border="4"
             />
             <h2 style="background-color: #ffce9e; text-align: center">
-               有名アパレルブランドが古着を無料回収！！
+              有名アパレルブランドが古着を無料回収！！
             </h2>
             古着を無料で回収するアパレルブランドが近年増えています。<br />
             回収に協力すると、クーポン券やポイントをもらえるブランドも<br />存在するので、古着回収への注目度は高まっています。<br />
@@ -25,7 +25,7 @@
             <h2 style="background-color: #ffce9e; text-align: center">
               古着を無料で回収するアパレルブランド3選
             </h2>
- <span id="sample1" style="text-align: center"
+            <span id="sample1" style="text-align: center"
               ><h4>1.UNIQLO</h4></span
             ><br />
             ユニクロでは自社ブランドの商品を回収するリサイクルボックスを全店に設置。回収した衣服は、新たな服や燃料、素材に生まれ変わったり、難民キャンプに支援衣料としてリユースされたりします。
@@ -44,8 +44,6 @@
       </div>
     </div>
   </div>
-
-
 </template>
 
 <style>
@@ -159,6 +157,4 @@
   top: 1027px;
   background-color: #d8ffb2;
 }
-
-
 </style>
