@@ -638,6 +638,7 @@ iframe {
   width: 500px;
   height: 100px;
   padding-top: 20px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
