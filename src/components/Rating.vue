@@ -370,7 +370,7 @@ export default {
 .brand h2 {
   color: black;
   position: relative;
-  top: 450px;
+  top: 430px;
   font-family: "Baskerville Old Face", serif;
   background-color: #ffcc99;
   border: #fff solid 1px;

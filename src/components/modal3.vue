@@ -58,7 +58,6 @@
   margin: 10px;
   position: relative;
   top: 500px;
-  left: 57%;
   border-radius: 30px;
 
   z-index: 300;
@@ -75,7 +74,6 @@
   height: 100%;
   position: fixed;
   top: 110%;
-  left: 0;
   z-index: 800;
 }
 .modal3:not(:target) {
@@ -92,7 +90,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
   background-color: pink;
   opacity: 0.7;
   top: 0;
@@ -105,9 +102,8 @@
   height: 100%;
   max-height: 500px;
   background-color: #fff;
-  position: absolute;
+  position: relative;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 .modal-contents3 {
@@ -122,7 +118,7 @@
   margin: 25px;
 }
 .modal-close3 {
-  position: absolute;
+  position: relative;
   top: 5px;
   right: 10px;
   color: black;
@@ -130,8 +126,7 @@
 
 #sample1 {
   border: solid 0.5px;
-  position: absolute;
-  left: 40%;
+  position: relative;
   top: 543px;
   background-color: #ffb2b2;
 }
@@ -139,7 +134,6 @@
 #sample2 {
   border: solid 0.5px;
   position: absolute;
-  left: 40%;
   top: 787px;
   background-color: #ddbcff;
 }
@@ -147,7 +141,6 @@
 #sample3 {
   border: solid 0.5px;
   position: absolute;
-  left: 40%;
   top: 1027px;
   background-color: #d8ffb2;
 }

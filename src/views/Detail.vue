@@ -4,9 +4,9 @@
     <div class="zara">
       <h1 style="color: black; font-size: 46px">
         {{ this.$route.params.brand }}
-      </h1>
+      </h1></div>
       <div class="zaraimage">
-        <img v-bind:src="imgPath" width="320" height="280" />
+        <img v-bind:src="imgPath" width="320" height="280" /></div>
 
         <div class="comprete">
           <img
@@ -54,19 +54,19 @@
         <div class="zaraconcrete">
           <img
             src="https://cdn.pixabay.com/photo/2018/05/30/09/58/pollution-3441119_1280.jpg"
-            width="470"
-            height="770"
+            width=33%;
+            height="780"
           />
           <img
             src="https://cdn.pixabay.com/photo/2021/05/16/06/46/india-6257329_1280.jpg"
-            width="470"
-            height="770"
+            width="34%"
+            height="780"
           />
           <img
             src="https://cdn.pixabay.com/photo/2017/06/07/10/47/elephant-2380009_1280.jpg"
-            width="470"
-            height="770"
-          />
+            width="33%"
+            height="780"
+          /></div>
 
           <div class="subtitle1"><h1>Environment</h1></div>
           <div class="subtitle2"><h1>Labor</h1></div>
@@ -165,12 +165,7 @@
           </div>
 
           <div class="zaraanimalrate">
-            <!-- <img
-              class="animalimg"
-              src="https://rakugakiicon.com/ri/wp-content/uploads/2017/06/smile-040.png"
-              width="40"
-              height="40"
-            /> -->
+
 
             <img
               v-if="animalbadness"
@@ -223,9 +218,7 @@
             </h4>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -322,7 +315,7 @@ export default {
          "PeopleTreeの動物評価はGOODです。染色しやすい白い毛のアルパカを求める割合の増加によってアルパカの個体数の減少という現状を受け止め、Peopletreでは自然の牧草で育てられたアルパカの毛を手紡ぎ、手編みして天然の毛色を活かした利用が行われています。また素材の調達方法の規制やルーツの確認を徹底し無駄な利用を削減し環境・動物ともに配慮した生産に努めています。アルパカの毛以外の具体的な動物福祉に関する記述はあまり多くはされていません。",
          "Patagoniaの動物評価はSo Soです。動物性素材の調達方法として生きた鳥などから毛や皮を採取しないことを基準とし、ルーツの確認を徹底しています。また調達における動物福祉に関する教育や研修を設け、動物福祉に関するシステムの改善にも取り組んでいます。また、製品によっては動物性素材を一切使用せずに生産しているものもあり、今後動物性素材の使用の削減と調達基準の見直しが促進される傾向にあります。",
           "NIKEの動物評価はBADです。スニーカー製品以外の衣類なでも再生ポリエステルやリサイクル素材を使用した製品作りが進んでおり、さらに従来動物性素材が使用されているスニーカーのレース部分までにも動物性素材ではなくリサイクル素材や天然素材の利用が促進されています。また動物性の皮革を使用しない「ナイキスキン」を使用したシューズも注目を集めています。しかし、具体的に使用を禁止している動物性素材などの追及はありません。",
-           "StellaMsCartneyの動物評価はGOODです。StellaMsCartneyでは創業者の意思のもと、一切の動物の皮を使っておらずリアルレザーや毛皮を使用したものはありません。デザインに制限がかかるとしても動物性素材の使用を出来る限り制限し、エコレザーの使用によって商品の信頼を獲得しながら動物福祉を満たした成果をあげています。動物福祉・愛護の意識を周囲にも広げるための取り組みを商品の発表やイベントなどで積極的に行われています。皮以外の動物性素材の代用には再生カシミヤや人口スパイダーシルクなど環境にも配慮した製品の利用が推進されています。",
+         "StellaMsCartneyの動物評価はGOODです。StellaMsCartneyでは創業者の意思のもと、一切の動物の皮を使っておらずリアルレザーや毛皮を使用したものはありません。デザインに制限がかかるとしても動物性素材の使用を出来る限り制限し、エコレザーの使用によって商品の信頼を獲得しながら動物福祉を満たした成果をあげています。動物福祉・愛護の意識を周囲にも広げるための取り組みを商品の発表やイベントなどで積極的に行われています。皮以外の動物性素材の代用には再生カシミヤや人口スパイダーシルクなど環境にも配慮した製品の利用が推進されています。",
         "Nonastiesの動物評価はGREATです。Nonastiesで生産されている製品には毛皮、羊毛、革、絹の全てが使用されておらず、100％PETA承認ビーガン生産です。この生産ポリシーによって衣類の生産工程において動物性食品は一切使用されておらず、動物実験や残虐行為もない植物ベースの製品が提供されています。骨やウールに至るまで動物性素材が使用されておらず、オーガニックのフェアトレードコットン100％の製品が多くあります。",
         "OUTERKNOWNの動物評価はSo Soです。OUTERKNOWNは2人のサーファーの手から誕生しており、海を中心とした方針が多いと言えます。動物性素材の削減として植物性のナッツを使用したボタンの開発や海洋生物の生命を危険に晒す海洋を汚染する廃棄物の回収とそれらを利用した商品の生産、ゴミの回収を促進するための募金活動への参加やキャンペーンが継続的に実施されています。",
 
@@ -402,21 +395,24 @@ export default {
 
 <style>
 .zara {
-  position: absolute;
-  top: 495px;
+  position: relative;
+  top: 335px;
   font-family: "Baskerville Old Face", serif;
+  text-align: center;
+
 }
 .zaraimage {
   position: relative;
-  top: 100px;
+  top: 450px;
   text-align: center;
 }
 
 .zara h1 {
   position: relative;
   top: 100px;
-  text-align: center;
   color: white;
+  text-align: center;
+
 }
 
 .comprete {
@@ -427,34 +423,48 @@ export default {
   border: dashed 2px yellow; /*点線*/
   height: 160px;
   font-family: "Baskerville Old Face", serif;
-  width: 25%;
+  width: 30%;
   height: 270px;
   position: relative;
-  left: 36%;
+  top:490px;
+  display: block;
+  margin:auto;
+    text-align: center;
+
+
 }
 
 .img-border {
   border: 4px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  justify-content: center;
+  
 }
 
 .comprete p {
   font-size: 42px;
   margin: 0;
   padding: 0;
+  justify-content: center;
+    
+
+
 }
 
 .zaraconcrete {
   display: flex;
-  gap: 5px 10px;
   z-index: 10;
+  display: block;
+  margin: 10px auto;
+  position: absolute;
+  top: 1380px;
 }
 
 .subtitle1 {
   z-index: 20;
-  position: absolute;
-  left: 140px;
-  top: 560px;
+  position: relative;
+  top: 410px;
+  margin-left: 100px;
   font-family: "Baskerville Old Face", serif;
   color: white;
   padding: 1rem 0.5rem;
@@ -464,105 +474,134 @@ export default {
 }
 
 .subtitle2 {
-  position: absolute;
-  left: 660px;
-  top: 560px;
+  position: relative;
+  top: 365px;
   font-family: "Baskerville Old Face", serif;
   color: white;
   padding: 1rem 0.5rem;
   line-height: 0.85em;
   color: #fff;
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+    text-align: center;
+    z-index: 500;
+
 }
 
 .subtitle3 {
-  position: absolute;
-  left: 1150px;
-  top: 560px;
+  position: relative;
+  top: 320px;
   font-family: "Baskerville Old Face", serif;
   color: white;
   padding: 1rem 0.5rem;
   line-height: 0.85em;
   color: #fff;
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+  float: right;
+  margin-right: 130px;
+      z-index: 500;
+
 }
 
 .environmentrate {
   z-index: 20;
-  position: absolute;
-  top: 700px;
-  left: 115px;
+  position: relative;
+  top: 340px;
   padding: 0.5em 1em;
   margin: 2em 0;
   background: #f0f7ff;
   border: dashed 2px #5b8bd0; /*点線*/
+  width: 200px;
   height: 160px;
-  font-family: "Baskerville Old Face", serif;
+  font-family: "Baskerville Old Face", serif; 
+  margin-left: 100px;
+  text-align: center;
 }
 
 .zaralaborrate {
   z-index: 20;
-  position: absolute;
-  top: 730px;
-  left: 600px;
+  position: relative;
+  top: -374px;
   padding: 0.5em 1em;
   background: #eaffea;
   border: dashed 2px green; /*点線*/
   height: 160px;
   width: 200px;
   font-family: "Baskerville Old Face", serif;
+  text-align: center;
+  z-index: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+
 }
 
 .zaraanimalrate {
   z-index: 20;
-  position: absolute;
-  top: 730px;
-  left: 1105px;
+  position: relative;
   padding: 0.5em 1em;
   background: #fff2e5;
   border: dashed 2px orange; /*点線*/
   height: 160px;
   width: 200px;
   font-family: "Baskerville Old Face", serif;
+  text-align: center;
+  margin-right: 70px;
+  float: right;
+  top: -550px;
+
 }
 
 .zaraenvironmentphraze {
   color: black;
-  position: absolute;
-  left: 45px;
-  top: 925px;
+  position: relative;
+  top: 325px;
   background-color: rgba(240, 234, 234, 0.62);
-
   height: 500px;
   width: 400px;
+  margin-left: 15px;
+  z-index: 300;
+    text-align: center;
+
 }
 
 .zaralaborphraze {
   color: black;
   position: absolute;
-  left: 520px;
-  top: 925px;
+  top: 1660px;
   background-color: rgba(240, 234, 234, 0.62);
   height: 500px;
   width: 400px;
+  z-index: 300;
+  text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+
 }
 
 .zaraanimalphraze {
   color: black;
   position: absolute;
-  left: 1000px;
-  top: 925px;
+  top: 1660px;
+  float: right;
   background-color: rgba(240, 234, 234, 0.62);
-  height: 500px;
+  height: 450px;
   width: 400px;
+  right: 2%;
+  z-index: 500;
+    text-align: center;
+
 }
 
 .box {
-  position: absolute;
+  position: relative;
+  left: 29%;
   top: 350px;
-  right: 370px;
   padding: 0.5em 1em;
   margin: 2em 0;
+  width: 170px;
   color: #232323;
   background: #fff8e8;
   border-left: solid 10px #ffc06e;
@@ -573,7 +612,7 @@ export default {
   background-size: cover;
   height: 580px;
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 

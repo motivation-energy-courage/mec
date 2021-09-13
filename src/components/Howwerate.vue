@@ -16,8 +16,8 @@
   background-image: url(http://farm3.static.flickr.com/2196/2495481645_d6a07c44cd.jpg);
     background-size: cover;
 
-  width: 900px;
-  height: 500px;
+  width: 65%;
+  height: 90%;
   border: 2px solid;
   color: white;  
   position: relative;
@@ -25,6 +25,7 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
+  margin-bottom: 30px;
 
 }
 

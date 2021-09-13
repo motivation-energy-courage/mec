@@ -51,11 +51,11 @@
   color: #fff;
   margin: 10px;
   position: relative;
-  top: 390px;
-  left: 45%;
+  top: 370px;
   border-radius: 30px;
-
+  text-align: center;
   z-index: 1000;
+  left: 45%;
 }
 
 .modal-open a {

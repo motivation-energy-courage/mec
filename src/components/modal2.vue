@@ -52,7 +52,6 @@
   margin: 10px;
   position: relative;
   top: 530px;
-  left: 4%;
   border-radius: 30px;
 
   z-index: 1000;
