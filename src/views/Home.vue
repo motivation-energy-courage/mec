@@ -121,7 +121,7 @@ export default {
       seikaiOrFuseikai: "",
       question: [
         {
-          title: "Q.ジーンズ1本作るために何リットルの水が必要になるでしょう？",
+          title: "Q．ジーンズ1本作るために何リットルの水が必要になるでしょう？",
           comment: "これはなんと人が7年かけて飲む、水の量に相当します！！！",
           answers: [
             {
@@ -238,18 +238,20 @@ export default {
         },
         {
           title: "Q．ラナプラザ事件は、どこの国で起こったでしょうか？",
+          comment:
+            "バングラデシュは豊かな緑と多くの川や水路が特徴の南アジアの国です！",
           answers: [
             {
-              choice: "A．バングラデシュ",
-              correct: true,
+              choice: "A．ミャンマー",
+              correct: false,
             },
             {
               choice: "B．インド",
               correct: false,
             },
             {
-              choice: "C．ミャンマー",
-              correct: false,
+              choice: "C．バングラデシュ",
+              correct: true,
             },
             {
               choice: "D．ネパール",
@@ -603,9 +605,14 @@ iframe {
 .btn {
   width: 100％;
   height: 100％;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   line-height: 35px;
   padding-top: 2rem;
   padding-bottom: 1rem;
+  flex-direction: column;
 }
 .btn a {
   display: flex;
@@ -630,21 +637,27 @@ iframe {
 .quiz-kaisetsu {
   width: 500px;
   height: 100px;
-  margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .kaisetsu-btn {
-  position: absolute;
-  width: 70px;
-  height: 50px;
+  /* position: relative;
+  width: 60px;
+  height: 50px; */
   line-height: 50px;
-  padding-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .kaisetsu-btn a {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 70px;
+  height: 50px;
   text-decoration: none;
   background: #ffffff;
   text-align: center;
