@@ -116,7 +116,7 @@ export default {
 <style scoped>
 .submits {
   position: relative;
-  top: 950px;
+  top: −1050px;
 }
 
 .newpost {

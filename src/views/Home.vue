@@ -2,7 +2,6 @@
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
 
-
     <div id="setsumei" style="line-height: 30px">
       このサイトでは素材の選定、生産、販売までのプロセスで<br />人と地球環境に配慮して作られたファッション＝<br />エシカルファッションについて紹介しています。
     </div>
@@ -14,7 +13,6 @@
           「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
         </h3>
       </div>
-
     </div>
     <div class="quiz">
       <h1>Quiz Game</h1>
@@ -86,31 +84,28 @@
           height="400"
         />
       </div>
-  
     </div>
 
     <div class="information">
       <h1>Information</h1>
-
     </div>
 
     <div class="introduce2">
       エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
     </div>
-      <div class="site">
-        <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
-        <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
-        <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
-      </div>
-      <div class="shokai" style="word-spacing: 70px">
-        <h2>
-          ①歴史に残る悲劇・ラナプラザ事件について
-          ②エシカルファッションってどんなもの？
-          ③ファストファッションの裏にある事実
-        </h2>
-        <div>
-          <insta />
-
+    <div class="site">
+      <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
+      <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
+      <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
+    </div>
+    <div class="shokai" style="word-spacing: 70px">
+      <h2>
+        ①歴史に残る悲劇・ラナプラザ事件について
+        ②エシカルファッションってどんなもの？
+        ③ファストファッションの裏にある事実
+      </h2>
+      <div>
+        <insta />
       </div>
     </div>
   </div>
@@ -513,16 +508,17 @@ export default {
   /* padding-top: 100px; */
   font-size: 1.5rem;
   color: #696969;
-@keyframes SlideIn {
-  0% {
-    opacity: 0; /*初期状態では透明に*/
-    transform: translateX(64px);
+  @keyframes SlideIn {
+    0% {
+      opacity: 0; /*初期状態では透明に*/
+      transform: translateX(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}}
+}
 
 #setsumei {
   font-size: 18px;
@@ -535,7 +531,6 @@ export default {
   writing-mode: vertical-rl;
   font-family: "Baskerville Old Face", serif;
 }
-
 
 #title {
   animation-name: fadeup;
@@ -622,8 +617,6 @@ iframe {
 .introduce h3 {
   position: absolute; /*絶対配置*/
   top: 780px;
-
-
 }
 
 .introduce2 {
@@ -635,7 +628,6 @@ iframe {
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 .shokai {
@@ -648,7 +640,6 @@ iframe {
   font-family: "Baskerville Old Face", serif;
   align-items: center;
 }
-
 
 .site {
   display: flex;
@@ -737,6 +728,5 @@ iframe {
 
 .site {
   display: flex;
-
 }
 </style>

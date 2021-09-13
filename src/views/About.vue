@@ -3,7 +3,6 @@
     <Rating />
 
     <Howwerate />
-
   </div>
 </template>
 

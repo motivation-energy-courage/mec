@@ -10,21 +10,22 @@
           <div class="modal-content3" style="line-height: 50px">
             <img
               class="nakatasan"
-              src="@/assets/古着回収.jpeg"
+              src="@/assets/中田.jpg"
               width="220"
               height="180"
               border="4"
             />
             <h2 style="background-color: #ffce9e; text-align: center">
-              有名アパレルブランドが古着を無料回収！！
+               有名アパレルブランドが古着を無料回収！！
             </h2>
             古着を無料で回収するアパレルブランドが近年増えています。<br />
             回収に協力すると、クーポン券やポイントをもらえるブランドも<br />存在するので、古着回収への注目度は高まっています。<br />
             ここでは、古着を無料で回収するアパレルブランドを3つ紹介します。
+
             <h2 style="background-color: #ffce9e; text-align: center">
               古着を無料で回収するアパレルブランド3選
             </h2>
-            <span id="sample1" style="text-align: center"
+ <span id="sample1" style="text-align: center"
               ><h4>1.UNIQLO</h4></span
             ><br />
             ユニクロでは自社ブランドの商品を回収するリサイクルボックスを全店に設置。回収した衣服は、新たな服や燃料、素材に生まれ変わったり、難民キャンプに支援衣料としてリユースされたりします。
@@ -43,6 +44,8 @@
       </div>
     </div>
   </div>
+
+
 </template>
 
 <style>
@@ -57,10 +60,12 @@
   color: #fff;
   margin: 10px;
   position: relative;
-  top: 500px;
+  top: 530px;
+  margin-right: 250px;
+  float: right;
   border-radius: 30px;
 
-  z-index: 300;
+  z-index: 1000;
 }
 
 .modal-open3 a {
@@ -74,6 +79,7 @@
   height: 100%;
   position: fixed;
   top: 110%;
+  left: 0;
   z-index: 800;
 }
 .modal3:not(:target) {
@@ -90,6 +96,7 @@
   display: block;
   width: 100%;
   height: 100%;
+  position: absolute;
   background-color: pink;
   opacity: 0.7;
   top: 0;
@@ -102,8 +109,9 @@
   height: 100%;
   max-height: 500px;
   background-color: #fff;
-  position: relative;
+  position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 .modal-contents3 {
@@ -118,10 +126,17 @@
   margin: 25px;
 }
 .modal-close3 {
-  position: relative;
+  position: absolute;
   top: 5px;
   right: 10px;
   color: black;
+}
+
+.nakatasan {
+  position: relative;
+  top: 10px;
+  left: 150px;
+  margin: 4px;
 }
 
 #sample1 {
@@ -144,4 +159,6 @@
   top: 1027px;
   background-color: #d8ffb2;
 }
+
+
 </style>

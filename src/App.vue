@@ -3,10 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link>
 
-
       <router-link to="/about">Rating</router-link>
-  
-
 
       <router-link to="/my-page">Sustainable</router-link>
     </div>
