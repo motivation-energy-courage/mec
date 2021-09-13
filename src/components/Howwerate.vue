@@ -47,7 +47,9 @@
   line-height: 0.95em;
   color: #fff;
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.5);
-  animation: SlideIn 12.6s infinite;
+    animation: SlideIn 12.6s infinite;
+
+  
 }
 
 .how h4 {

@@ -4,9 +4,7 @@
       <!-- <div class="modal modal-overlay" @click.self="$emit('next')">
         <div class="modal modal-overlay" @click.self="$emit('commentary')"> -->
       <div class="modal-window">
-        <div class="modal-content">
-          <slot />
-        </div>
+        <div class="modal-content"><slot /></div>
         <footer class="modal-footer">
           <slot name="footer">
             <button @click="$emit('close')">閉じる</button>
@@ -31,8 +29,6 @@
     z-index: 30;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background: rgba(0, 0, 0, 0.5);
   }
 

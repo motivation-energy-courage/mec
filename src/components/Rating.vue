@@ -1,6 +1,7 @@
 <template>
-  <div class="about">
+  <div class="about" >
     <div class="subtitle">
+
       <h1 style="text-align: center; padding: 70px; font-size: 50px">Rating</h1>
     </div>
 
@@ -53,6 +54,7 @@
     </div>
     &nbsp;&nbsp;&nbsp;&nbsp;
   </div>
+
 </template>
 
 <script>
@@ -398,6 +400,7 @@ export default {
   font-size: 30px;
   font-family: "Baskerville Old Face", serif;
   justify-content: center;
+
 }
 
 .item a {
@@ -453,6 +456,7 @@ export default {
   border-radius: 10px;
   animation: SlideIn 6.6s infinite;
   margin: 10px auto;
+
 }
 
 .zarap:hover {
