@@ -19,7 +19,7 @@
         <p>Animal Right</p>
       </div>
 
-      <div class="example-modal-window">
+      <div class="modal-window">
         <MyModal @close="closeModal" @next="nextModal" v-if="quizmodal">
           <div class="modal-title">問題！</div>
           {{ question[questionOrder].title }}<br />
