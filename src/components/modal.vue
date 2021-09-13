@@ -18,8 +18,7 @@
             <h2 style="background-color: #ffce9e; text-align: center">
               定額制服借り放題サービス「メチャカリ」
             </h2>
-            2021年8月8日に芸能人でありYouTuberの中田敦彦氏が、新しくアパレルブランドのプロジェクトを開始することを発表しました。<br />
-            ブランド名は「CARL VON LINNÉ / カール フォン リンネ」。<br />持続可能性に極限配慮し、生地の選び方から、生産方法にまでこだわり、<br />さらにそれを受注生産で販売するとのこと。<br />
+           20～30代女性に最も使われるファッションレンタルアプリです。ストライプインターナショナルが展開するearth music&ecologyをはじめ、人気ブランドの新品アイテムを定額で何度でも借りることが可能。レディース・メンズ・キッズのアイテムを取扱い。夏は浴衣、冬はコートも借りることができます。返却時のクリーニングや洗濯は不要。<br />
             <h2 style="background-color: #ffce9e; text-align: center">
               「CARL VON LINNÉ」の3つの特長
             </h2>
@@ -114,7 +113,22 @@
 }
 .modal-content {
   margin: 25px;
+
 }
+.modal-content2 {
+  margin: 25px;
+  text-align: center;
+
+}
+
+.nakatasan {
+  position: relative;
+
+  left: 10px;
+  margin: 4px;
+
+}
+
 .modal-close {
   position: absolute;
   top: 5px;
