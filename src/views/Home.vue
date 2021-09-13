@@ -78,6 +78,7 @@
           height="400"
         />
       </div>
+
     </div>
 
     <div class="information">
@@ -441,7 +442,7 @@ export default {
   flex-flow: column;
   font-family: "Baskerville Old Face", serif;
   position: relative;
-  top: 1000px;
+top: 1000px;
   text-align: center;
 }
 
@@ -489,7 +490,31 @@ export default {
   /* padding-top: 100px; */
   font-size: 1.5rem;
   color: #696969;
+
+@keyframes SlideIn {
+  0% {
+    opacity: 0; /*初期状態では透明に*/
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}}
+
+#setsumei {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+  position: relative;
+  top: 255px;
+  left: 300px;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-family: "Baskerville Old Face", serif;
+
 }
+
 
 #title {
   animation-name: fadeup;
@@ -572,7 +597,9 @@ iframe {
 .introduce2 {
   display: flex;
   position: relative;
+
   top: 1200px;
+
   font-family: "Baskerville Old Face", serif;
   font-size: 20px;
   justify-content: center;
@@ -581,6 +608,7 @@ iframe {
 }
 
 .shokai {
+
   display: flex;
   position: relative;
   top: 1250px;
@@ -594,6 +622,7 @@ iframe {
 .site {
   display: flex;
   position: relative;
+
   top: 1300px;
   justify-content: center;
   align-items: center;
@@ -606,6 +635,7 @@ iframe {
   justify-content: center;
   align-items: center;
   text-align: center;
+
 }
 
 .modal-title {
@@ -686,4 +716,14 @@ iframe {
   border: 2px solid #dedede;
   box-shadow: none;
 }
+
+.active {
+  display: none;
+}
+
+.site {
+  display: flex;
+
+}
+
 </style>
