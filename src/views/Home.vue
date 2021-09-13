@@ -88,20 +88,19 @@
       エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
     </div>
 
+    <div class="shokai">
+      ①歴史に残る悲劇・ラナプラザ事件について
+      ②エシカルファッションってどんなもの？ ③ファストファッションの裏にある事実
+    </div>
+
     <div class="site">
       <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
       <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
       <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
     </div>
-    <div class="shokai">
-      <h2>
-        ①歴史に残る悲劇・ラナプラザ事件について
-        ②エシカルファッションってどんなもの？
-        ③ファストファッションの裏にある事実
-      </h2>
-      <div>
-        <insta />
-      </div>
+
+    <div class="Instagram">
+      <insta />
     </div>
   </div>
 </template>
@@ -562,7 +561,7 @@ iframe {
   height: 50px;
   margin: 0 auto;
   position: relative;
-  top: 1250px;
+  top: 1150px;
 }
 
 .introduce h3 {
@@ -573,7 +572,7 @@ iframe {
 .introduce2 {
   display: flex;
   position: relative;
-  top: 1300px;
+  top: 1200px;
   font-family: "Baskerville Old Face", serif;
   font-size: 20px;
   justify-content: center;
@@ -582,21 +581,31 @@ iframe {
 }
 
 .shokai {
-  position: absolute;
-  top: 2100px;
-  left: 150px;
-  font-size: 14px;
+  display: flex;
+  position: relative;
+  top: 1250px;
   font-family: "Baskerville Old Face", serif;
+  font-size: 20px;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .site {
   display: flex;
-  display: flex;
   position: relative;
-  top: 1500px;
+  top: 1300px;
   justify-content: center;
   align-items: center;
+}
+
+.Instagram {
+  display: flex;
+  position: relative;
+  top: 650px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .modal-title {
