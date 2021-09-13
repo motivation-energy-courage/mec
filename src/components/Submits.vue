@@ -1,18 +1,19 @@
 <template>
   <div class="normal-box7">
+    <img src="@/assets/大理石赤.jpg" class="redstone" width=800 height=900>
     <div class="submits">
+      <br /><hr style="text-align: center" width="100%" size="20" noshade="" />
+      <h3 style="text-align: center" id="your">
+        【 あなたのSustainable Tips 】
+      </h3>
       <br />
-      <h1 style="text-align: center">
-        【あなたのSustainable Tipsを教えてください】
-      </h1>
-      <br />
+      <br>
 
-      <h4 style="text-align: center; font size=30">New Post</h4>
+      <h4 style="text-align: center; font size=60" id="newpost">New Post</h4>
       <div class="normal-box2">
         <div id="submit" style="text-align: center">
-          <h1>投稿内容</h1>
           <div id="submit-title" style="text-align: center">
-            <h1>タイトル</h1>
+            <h2>タイトル</h2>
           </div>
           <div class="textbox">
             <input
@@ -24,8 +25,8 @@
             />
           </div>
           <div id="picturee" style="text-align: center">
-            <h1>画像</h1>
-            <button v-on:click="Picture">画像アップロード</button>
+            <h2>画像</h2>
+            <button class="button1" v-on:click="Picture">画像アップロード</button>
           </div>
 
           <div class="textbox2">
@@ -39,9 +40,9 @@
           </div>
         </div>
         <div id="up">
-          <div id="shosai"><h1>詳細</h1></div>
+          <div id="shosai"><h2>詳細</h2></div>
           <div id="appp">
-            <button v-on:click="Post">投稿</button>
+         <h2><button class="toko" v-on:click="Post">投稿</button></h2>
           </div>
         </div>
         <div class="divid">
@@ -76,9 +77,7 @@
               <h2 style="text-align: center">Detail</h2>
               <h3 style="text-align: center">{{ post.details }}</h3>
               <br />
-              <h5 class="edit">編集</h5>
-              <br />
-              <h5 class="delete">削除</h5>
+
             </div>
           </div>
         </div>
@@ -131,17 +130,22 @@ export default {
 <style scoped>
 .submits {
   position: absolute;
-  top: 0px;
+  top: -40px;
   left: 0;
   right: 0;
   margin: auto;
 }
-
+/* 
 .normal-box7 {
-  padding: 50px 1000px 1000px 20px;
+  padding: 500px 100px 600px 20px;
+  width: 55%;
   margin-bottom: 10px;
   border: 5px double #333333;
-}
+  text-align: center;
+  justify-content: center;
+
+
+} */
 
 .submits h4 {
   background-color: rgba(255, 0, 0, 0.5);
@@ -181,40 +185,95 @@ export default {
   text-align: center;
 }
 
+.toko {
+   width: 10%;
+    min-width: 200px;
+    max-width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background: pink;
+    cursor: pointer;
+        font-size: 23px;
+
+}
+
 #submit {
   position: relative;
   top: 180px;
 }
 
+#your {
+  background-color: pink;
+  width: 420px;
+  height: 10%;
+  position: relative;
+  top:30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 30px;
+  font-size: 25px;
+}
+
+.redstone {
+  position: absolute;
+  top: 158px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0.8;
+}
+
+#newpost {
+  font-size: 40px;
+  position: relative;
+  top: 40px;
+}
+
 #submit h1 {
   position: relative;
-  top: -100px;
+  top: -200px;
 }
 
 #submit-title {
   position: relative;
-  top: 60px;
+  top: -110px;
+  
 }
 
 #picturee {
   position: relative;
-  top: 100px;
+  top: -40px;
 }
 
 #picturee button {
   position: relative;
-  top: -60px;
+  top: 9px;
+}
+
+.button1 {
+  width: 7%;
+    min-width: 200px;
+    max-width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background: pink;
+    cursor: pointer;
+    border-radius: 14px;
+    font-size: 15px;
 }
 
 #shosai {
   position: relative;
-  top: 304px;
+  top: 185px;
   text-align: center;
 }
 
 .textbox {
   position: relative;
-  top: -50px;
+  top: -120px;
   width: 40%;
   text-align: center;
   left: 0;
@@ -244,11 +303,12 @@ export default {
   border: 2px solid #ddd; /*枠線*/
   box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
   position: absolute;
-  top: 300px;
+  top: 210px;
   text-align: center;
   left: 0;
   right: 0;
   margin: auto;
+  
 }
 
 .divid {

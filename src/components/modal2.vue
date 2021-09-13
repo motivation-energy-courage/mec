@@ -124,7 +124,7 @@
 .nakatasan {
   position: relative;
   top: 10px;
-  left: 150px;
   margin: 4px;
+  left: 50%;
 }
 </style>

@@ -376,7 +376,7 @@ export default {
   font-family: "Baskerville Old Face", serif;
   background-color: #ffcc99;
   border: #fff solid 1px;
-  width: 420px;
+  width: 380px;
   border-radius: 10px;
   animation: SlideIn 6.6s infinite;
   margin: 10px auto;

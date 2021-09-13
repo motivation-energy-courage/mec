@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import Insta from "../components/Insta.vue"
+// import Insta from "../components/Insta.vue"
 // import Quiz from "../components/Quiz.vue"
 import MyModal from "./QQuiz.vue"
 
@@ -343,7 +343,7 @@ export default {
     }
   },
   components: {
-    Insta,
+    // Insta,
     // Quiz,
     MyModal,
   },
@@ -446,7 +446,7 @@ export default {
   flex-flow: column;
   font-family: "Baskerville Old Face", serif;
   position: relative;
-top: 1000px;
+top: 500px;
   text-align: center;
 }
 
@@ -580,7 +580,7 @@ iframe {
   height: 50px;
   margin: 0 auto;
   position: relative;
-  top: 1250px;
+  top: 600px;
 }
 
 .introduce h3 {
@@ -591,7 +591,7 @@ iframe {
 .introduce2 {
   display: flex;
   position: relative;
-  top: 1300px;
+  top: 640px;
   font-family: "Baskerville Old Face", serif;
   font-size: 20px;
   justify-content: center;
@@ -601,7 +601,7 @@ iframe {
 
 .shokai {
   position: absolute;
-  top: 2100px;
+  top: 1870px;
   left: 150px;
   font-size: 14px;
   font-family: "Baskerville Old Face", serif;
@@ -612,7 +612,7 @@ iframe {
   display: flex;
   display: flex;
   position: relative;
-  top: 1500px;
+  top: 830px;
   justify-content: center;
   align-items: center;
 }
