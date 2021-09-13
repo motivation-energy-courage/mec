@@ -1,12 +1,18 @@
 <template>
   <div class="home">
     <div id="title">Better Ethical Fashion Choice</div>
+
+    <div id="setsumei" style="line-height: 30px">
+      このサイトでは素材の選定、生産、販売までのプロセスで<br />人と地球環境に配慮して作られたファッション＝<br />エシカルファッションについて紹介しています。
+    </div>
     <div id="team"><h4>MEC</h4></div>
-    <div class="introduce">
-      <h3 style="text-align: center">
-        エシカルファッションとは、<br />
-        「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
-      </h3>
+    <div class="honbun">
+      <div class="introduce">
+        <h3 style="text-align: center">
+          エシカルファッションとは、<br />
+          「環境を破壊しない」「労働者から搾取しない」「動物の命を守る」<br />といったエシカル消費の考え方に配慮して生産されたファッションの総称です。
+        </h3>
+      </div>
     </div>
     <div class="quiz">
       <h1>Quiz Game</h1>
@@ -78,6 +84,7 @@
           height="400"
         />
       </div>
+
     </div>
 
     <div class="information">
@@ -437,7 +444,7 @@ export default {
   flex-flow: column;
   font-family: "Baskerville Old Face", serif;
   position: relative;
-  top: 1000px;
+top: 1000px;
   text-align: center;
 }
 
@@ -486,6 +493,20 @@ export default {
   font-size: 1.5rem;
   color: #696969;
 }
+
+#setsumei {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+  position: relative;
+  top: 255px;
+  left: 300px;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-family: "Baskerville Old Face", serif;
+
+}
+
 
 #title {
   animation-name: fadeup;
@@ -666,4 +687,13 @@ iframe {
   border: 2px solid #dedede;
   box-shadow: none;
 }
+
+.active {
+  display: none;
+}
+
+.site {
+  display: flex;
+}
+
 </style>
