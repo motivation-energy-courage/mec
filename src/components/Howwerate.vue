@@ -1,53 +1,31 @@
 <template>
-  <div class="howwerate">
-    <div class="donyu">
-      <h10 style="text-align: center; font-size: 0px">lp </h10>
-      <div class="hello">
-        <h1>How we rate?</h1>
-        <div class="goodonyou">
-          <h4 style="line-height: 45px">
+<div class="how">
+  <h1>How We Rate?</h1>
+  
+   <h4 style="line-height: 45px">
             このサイトは、オーストラリアの慈善団体 Ethical Consumers
-            Australiaによる<br />社会的企業が、ローンチしたエシカルファッションアプリ「Good
-            on you」の<br />評価を元に作成しています。<br />レイティングはブランドの公式情報やNGOなどが公表している情報に基づいて行われており、<br />ブランドのエシカル度が5段階で表される仕組みです。
-            <br />このサイトでは14つのブランドが、環境、人権、アニマルウェルフェア（動物福祉）の<br />3つの視点でレイティングされています。
-          </h4>
-        </div>
-      </div>
-    </div>
-  </div>
+            Australia<br>による社会的企業が、ローンチしたエシカルファッションアプリ<br>「Good
+            on you」の評価を元に作成しています。<br />レイティングはブランドの公式情報やNGOなどが公表している情報に<br>基づいて行われており、ブランドのエシカル度が5段階で表される仕組みです。
+            <br />このサイトでは14つのブランドが、環境、人権、アニマルウェルフェア<br>（動物福祉）の3つの視点でレイティングされています。
+          </h4></div>
+
 </template>
 
 <style scoped>
-.howwerate {
-  position: absolute;
-  top: 1150px;
-}
+.how {
+  background-image: url(http://farm3.static.flickr.com/2196/2495481645_d6a07c44cd.jpg);
+    background-size: cover;
 
-.donyu {
-  position: relative;
-  top: 30px;
-  left: 130px;
-  z-index: 300;
-  padding: 1rem 0.5rem;
-  font-size: 25px;
-  line-height: 0.85em;
-  color: #fff;
-  padding: 20px;
-
-  background-image: url(https://beiz.jp/images_P/sky/sky_00031.jpg);
-  width: 1150px;
+  width: 900px;
   height: 500px;
   border: 2px solid;
-  background-size: cover;
-  border-radius: 60px;
-}
-
-.hello {
+  color: white;  
   position: relative;
-  top: 40px;
-  right: -70px;
-  color: color;
-  animation: SlideIn 12.6s infinite;
+  top:700px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+
 }
 
 @keyframes SlideIn {
@@ -61,8 +39,31 @@
   }
 }
 
-.goodonyou {
+
+.how h1 {
   position: relative;
   top: 20px;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  font-size: 2.2em;
+  line-height: 0.95em;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.5);
+    animation: SlideIn 12.6s infinite;
+
+  
+}
+
+.how h4 {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  font-size: 1.5em;
+  line-height: 0.95em;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 1);
+    animation: SlideIn 12.6s infinite;
+
 }
 </style>

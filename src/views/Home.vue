@@ -86,7 +86,7 @@
           height="400"
         />
       </div>
-      <Quiz />
+  
     </div>
 
     <div class="information">
@@ -463,7 +463,7 @@ export default {
   font-family: "Baskerville Old Face", serif;
 
   position: relative;
-  top: 1000px;
+  top: 500px;
 
   text-align: center;
 }
@@ -522,7 +522,7 @@ export default {
     opacity: 1;
     transform: translateX(0);
   }
-}
+}}
 
 #setsumei {
   font-size: 18px;
@@ -535,6 +535,7 @@ export default {
   writing-mode: vertical-rl;
   font-family: "Baskerville Old Face", serif;
 }
+
 
 #title {
   animation-name: fadeup;
@@ -628,7 +629,7 @@ iframe {
 .introduce2 {
   display: flex;
   position: relative;
-  top: 1300px;
+  top: 500px;
   font-family: "Baskerville Old Face", serif;
   font-size: 20px;
   justify-content: center;
@@ -640,7 +641,7 @@ iframe {
 .shokai {
   position: absolute;
 
-  top: 2150px;
+  top: 1650px;
 
   left: 30px;
   font-size: 14px;
@@ -652,7 +653,7 @@ iframe {
 .site {
   display: flex;
   position: relative;
-  top: 1500px;
+  top: 560px;
 }
 
 .modal-title {
@@ -732,12 +733,6 @@ iframe {
 
 .active {
   display: none;
-
-iframe {
-  width: 430px;
-  height: 550px;
-  margin: 0px 15px 0px 0px;
-  padding: 10px;
 }
 
 .site {
