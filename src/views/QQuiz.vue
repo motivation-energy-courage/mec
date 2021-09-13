@@ -3,9 +3,9 @@
     <div class="modalquiz modal-overlay" @click.self="$emit('close')">
       <!-- <div class="modal modal-overlay" @click.self="$emit('next')">
         <div class="modal modal-overlay" @click.self="$emit('commentary')"> -->
-      <div class="modal-window">
-        <div class="modal-content"><slot /></div>
-        <footer class="modal-footer">
+      <div class="modalquiz-window">
+        <div class="modalquiz-content"><slot /></div>
+        <footer class="modalquiz-footer">
           <slot name="footer">
             <button @click="$emit('close')">閉じる</button>
             <!-- <button @click="$emit('commentary')">解説</button> -->
@@ -27,10 +27,11 @@
     justify-content: center;
     position: fixed;
     z-index: 30;
-    top: 30%;
-    left: 30%;
-    background-color #fff
-    padding: 5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   &-window {
@@ -41,7 +42,7 @@
   }
 
   &-content {
-    padding: 100px 50px;
+    padding: 90px 50px;
   }
 
   &-footer {
