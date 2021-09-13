@@ -7,7 +7,6 @@ import MyPage from "../views/MyPage.vue"
 
 import Detail from "../views/Detail.vue"
 
-
 Vue.use(VueRouter)
 
 const routes = [

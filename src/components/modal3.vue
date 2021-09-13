@@ -10,7 +10,7 @@
           <div class="modal-content3" style="line-height: 50px">
             <img
               class="nakatasan"
-              src="@/assets/古着回収.jpeg"
+              src="@/assets/中田.jpg"
               width="220"
               height="180"
               border="4"
@@ -21,6 +21,7 @@
             古着を無料で回収するアパレルブランドが近年増えています。<br />
             回収に協力すると、クーポン券やポイントをもらえるブランドも<br />存在するので、古着回収への注目度は高まっています。<br />
             ここでは、古着を無料で回収するアパレルブランドを3つ紹介します。
+
             <h2 style="background-color: #ffce9e; text-align: center">
               古着を無料で回収するアパレルブランド3選
             </h2>
@@ -57,11 +58,12 @@
   color: #fff;
   margin: 10px;
   position: relative;
-  top: 500px;
-  left: 57%;
+  top: 530px;
+  margin-right: 250px;
+  float: right;
   border-radius: 30px;
 
-  z-index: 300;
+  z-index: 1000;
 }
 
 .modal-open3 a {
@@ -128,10 +130,16 @@
   color: black;
 }
 
+.nakatasan {
+  position: relative;
+  top: 10px;
+  left: 150px;
+  margin: 4px;
+}
+
 #sample1 {
   border: solid 0.5px;
-  position: absolute;
-  left: 40%;
+  position: relative;
   top: 543px;
   background-color: #ffb2b2;
 }
@@ -139,7 +147,6 @@
 #sample2 {
   border: solid 0.5px;
   position: absolute;
-  left: 40%;
   top: 787px;
   background-color: #ddbcff;
 }
@@ -147,7 +154,6 @@
 #sample3 {
   border: solid 0.5px;
   position: absolute;
-  left: 40%;
   top: 1027px;
   background-color: #d8ffb2;
 }

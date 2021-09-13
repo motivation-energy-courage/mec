@@ -56,7 +56,6 @@
   margin: 10px;
   position: relative;
   top: 960px;
-  left: 20%;
   border-radius: 30px;
 
   z-index: 300;
@@ -73,7 +72,6 @@
   height: 100%;
   position: fixed;
   top: 170%;
-  left: 0;
   z-index: 200;
 }
 .modal4:not(:target) {
@@ -105,7 +103,6 @@
   background-color: #fff;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 .modal-contents4 {
@@ -122,7 +119,6 @@
 .modal-close4 {
   position: absolute;
   top: 5px;
-  right: 10px;
   color: black;
 }
 </style>

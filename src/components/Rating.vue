@@ -1,58 +1,60 @@
 <template>
   <div class="about" >
     <div class="subtitle">
-      <h1 style="text-align: center; padding: 70px; font-size: 50px">Rating</h1></div>
 
-      <div class="brand" >
-        <h2 style="font-size: 34px">
-          &nbsp;Fast Fashion Brand&nbsp;
-        </h2>
-      </div>
+      <h1 style="text-align: center; padding: 70px; font-size: 50px">Rating</h1>
+    </div>
 
-      <div class="item" >
-        <div class="zarap" v-on:click="zara">ZARA</div>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="uniqlop" v-on:click="uniqlo">UNIQLO</div>
-        &nbsp;&nbsp;&nbsp;
-        <div id="mujip" v-on:click="muji">無印良品</div>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="shimamurap" v-on:click="shimamura">しまむら</div>
-        &nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <div class="item2" >
-          <br />
-          <div class="hmp" v-on:click="hm">H&M</div>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <div class="gapp" v-on:click="gap">GAP</div>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <div class="gup" v-on:click="gu">GU</div>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <div class="adidasp" v-on:click="adidas">adidas</div>
-          &nbsp;&nbsp;&nbsp;&nbsp;</div>
-          <div class="brand2">
-            <h2 style=" font-size: 34px ">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ethical Fashion
-              Brand&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </h2>
-          </div>
-          <div class="item3" >
-            <br />
-            <div class="peoplep" v-on:click="peopletree">PeopleTree</div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <div class="patagoniap" v-on:click="patagonia">Patagonia</div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <div class="nikep" v-on:click="nike">NIKE</div></div>
-            <div class="item4" >
-              <br />
-              <div class="stellap" v-on:click="stella">
-                Stella&nbsp;McCartney
-              </div>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="nastiesp" v-on:click="nasties">No&nbsp;Nasties</div>
-              &nbsp;&nbsp;&nbsp;
-              <div class="outerp" v-on:click="outerknown">Outerknown</div>
-            </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-          </div>
+    <div class="brand">
+      <h2 style="font-size: 34px">&nbsp;Fast Fashion Brand&nbsp;</h2>
+    </div>
+
+    <div class="item">
+      <div class="zarap" v-on:click="zara">ZARA</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="uniqlop" v-on:click="uniqlo">UNIQLO</div>
+      &nbsp;&nbsp;&nbsp;
+      <div id="mujip" v-on:click="muji">無印良品</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="shimamurap" v-on:click="shimamura">しまむら</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="item2">
+      <br />
+      <div class="hmp" v-on:click="hm">H&M</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="gapp" v-on:click="gap">GAP</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="gup" v-on:click="gu">GU</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="adidasp" v-on:click="adidas">adidas</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="brand2">
+      <h2 style="font-size: 34px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ethical Fashion
+        Brand&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </h2>
+    </div>
+    <div class="item3">
+      <br />
+      <div class="peoplep" v-on:click="peopletree">PeopleTree</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="patagoniap" v-on:click="patagonia">Patagonia</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="nikep" v-on:click="nike">NIKE</div>
+    </div>
+    <div class="item4">
+      <br />
+      <div class="stellap" v-on:click="stella">Stella&nbsp;McCartney</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="nastiesp" v-on:click="nasties">No&nbsp;Nasties</div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="outerp" v-on:click="outerknown">Outerknown</div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+
 </template>
 
 <script>
@@ -370,15 +372,14 @@ export default {
 .brand h2 {
   color: black;
   position: relative;
-  top: 450px;
+  top: 430px;
   font-family: "Baskerville Old Face", serif;
   background-color: #ffcc99;
   border: #fff solid 1px;
   width: 420px;
   border-radius: 10px;
   animation: SlideIn 6.6s infinite;
-    margin: 10px auto;
-
+  margin: 10px auto;
 }
 
 @keyframes SlideIn {
@@ -441,8 +442,7 @@ export default {
 }
 
 .brand2 {
-    position: relative;
-
+  position: relative;
 }
 
 .brand2 h2 {
@@ -455,7 +455,7 @@ export default {
   width: 520px;
   border-radius: 10px;
   animation: SlideIn 6.6s infinite;
-    margin: 10px auto;
+  margin: 10px auto;
 
 }
 
@@ -556,6 +556,4 @@ export default {
   transition: 0.3s;
   cursor: pointer;
 }
-
-
 </style>
