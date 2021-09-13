@@ -19,8 +19,8 @@
         <p>Animal Right</p>
       </div>
 
-      <div class="modal-window">
-        <MyModal @close="closeModal" @next="nextModal" v-if="quizmodal">
+      <div class="example-modal-window">
+        <MyModal @close="closeModal" @next="nextModal" v-if="modal">
           <div class="modal-title">問題！</div>
           {{ question[questionOrder].title }}<br />
 
@@ -47,7 +47,7 @@
           </div>
 
           <div class="kaisetsu-btn">
-            <a v-on:click="Kaisetsudisplay"> 解説</a>
+            <a v-on:click="Kaisetsudisplay">解説</a>
           </div>
           <div class="quiz-kaisetsu" v-if="Kaisetsu">
             {{ question[questionOrder].comment }}
@@ -88,19 +88,20 @@
       エシカルファッションについて分かりやすく情報を載せているWebサイトを紹介します。
     </div>
 
-    <div class="shokai">
-      ①歴史に残る悲劇・ラナプラザ事件について
-      ②エシカルファッションってどんなもの？ ③ファストファッションの裏にある事実
-    </div>
-
     <div class="site">
       <iframe src="https://smartpeople.jp/column/lana-plaza/"></iframe>
       <iframe src="https://naruhodosdgs.jp/ethical-fashion/"></iframe>
       <iframe src="https://www.yogaroom.jp/yogahack/p/6587"></iframe>
     </div>
-
-    <div class="Instagram">
-      <insta />
+    <div class="shokai">
+      <h2>
+        ①歴史に残る悲劇・ラナプラザ事件について
+        ②エシカルファッションってどんなもの？
+        ③ファストファッションの裏にある事実
+      </h2>
+      <div>
+        <insta />
+      </div>
     </div>
   </div>
 </template>
@@ -114,14 +115,13 @@ export default {
   data() {
     return {
       questionOrder: 0,
-      quizmodal: false,
+      modal: false,
       Kaisetsu: false,
       SorF: false,
-      isActive: false,
       seikaiOrFuseikai: "",
       question: [
         {
-          title: "Q．ジーンズ1本作るために何リットルの水が必要になるでしょう？",
+          title: "Q.ジーンズ1本作るために何リットルの水が必要になるでしょう？",
           comment: "これはなんと人が7年かけて飲む、水の量に相当します！！！",
           answers: [
             {
@@ -238,9 +238,6 @@ export default {
         },
         {
           title: "Q．ラナプラザ事件は、どこの国で起こったでしょうか？",
-          comment:
-            "バングラデシュは豊かな緑と多くの川や水路が特徴の南アジアの国です！",
-
           answers: [
             {
               choice: "A．バングラデシュ",
@@ -358,42 +355,42 @@ export default {
       this.Kaisetsu = true
     },
     openModal1() {
-      this.quizmodal = true
+      this.modal = true
       this.questionOrder = 0
     },
     openModal2() {
-      this.quizmodal = true
+      this.modal = true
       this.questionOrder = 3
     },
     openModal3() {
-      this.quizmodal = true
+      this.modal = true
       this.questionOrder = 6
     },
     closeModal() {
-      this.quizmodal = false
+      this.modal = false
     },
     nextModal() {
       this.Kaisetsu = false
       this.SorF = false
       console.log(this.questionOrder)
       if (this.questionOrder == 8) {
-        this.quizmodal = false
+        this.modal = false
       } else if (this.questionOrder >= 6) {
-        this.quizmadal = false
+        this.madal = false
         this.questionOrder += 1
-        this.quizmodal = true
+        this.modal = true
       } else if (this.questionOrder == 5) {
-        this.quizmodal = false
+        this.modal = false
       } else if (this.questionOrder >= 3) {
-        this.quizmodal = false
+        this.modal = false
         this.questionOrder += 1
-        this.quizmodal = true
+        this.modal = true
       } else if (this.questionOrder == 2) {
-        this.quizmodal = false
+        this.modal = false
       } else {
-        this.quizmodal = false
+        this.modal = false
         this.questionOrder += 1
-        this.quizmodal = true
+        this.modal = true
       }
     },
   },
@@ -411,7 +408,6 @@ export default {
   width: 100%;
   position: absolute;
   top: 0;
-  /* animation: zoomIn 2.8s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards; */
 }
 .home h1 {
   font-family: "Baskerville Old Face", serif;
@@ -561,7 +557,7 @@ iframe {
   height: 50px;
   margin: 0 auto;
   position: relative;
-  top: 1150px;
+  top: 1250px;
 }
 
 .introduce h3 {
@@ -572,7 +568,7 @@ iframe {
 .introduce2 {
   display: flex;
   position: relative;
-  top: 1200px;
+  top: 1300px;
   font-family: "Baskerville Old Face", serif;
   font-size: 20px;
   justify-content: center;
@@ -581,31 +577,21 @@ iframe {
 }
 
 .shokai {
-  display: flex;
-  position: relative;
-  top: 1250px;
+  position: absolute;
+  top: 2100px;
+  left: 150px;
+  font-size: 14px;
   font-family: "Baskerville Old Face", serif;
-  font-size: 20px;
-  justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .site {
   display: flex;
-  position: relative;
-  top: 1300px;
-  justify-content: center;
-  align-items: center;
-}
-
-.Instagram {
   display: flex;
   position: relative;
-  top: 650px;
+  top: 1500px;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .modal-title {
@@ -615,10 +601,8 @@ iframe {
 }
 
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 100％;
+  height: 100％;
   line-height: 35px;
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -644,27 +628,23 @@ iframe {
 }
 
 .quiz-kaisetsu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   width: 500px;
   height: 100px;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 60px;
 }
 
 .kaisetsu-btn {
+  position: absolute;
+  width: 70px;
+  height: 50px;
   line-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding-left: 150px;
 }
 .kaisetsu-btn a {
   display: block;
-  width: 70px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   background: #ffffff;
   text-align: center;
