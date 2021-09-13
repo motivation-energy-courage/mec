@@ -111,7 +111,7 @@
   position: relative;
   color: black;
 }
-.modal-content {
+.modal-contents {
   margin: 25px;
 
 }

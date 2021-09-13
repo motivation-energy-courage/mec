@@ -1,6 +1,6 @@
 <template>
-  <transition name="modal" appear>
-    <div class="modal modal-overlay" @click.self="$emit('close')">
+  <transition name="modalquiz" appear>
+    <div class="modalquiz modal-overlay" @click.self="$emit('close')">
       <!-- <div class="modal modal-overlay" @click.self="$emit('next')">
         <div class="modal modal-overlay" @click.self="$emit('commentary')"> -->
       <div class="modal-window">
@@ -20,22 +20,24 @@
 </template>
 
 <style lang="stylus" scoped>
-.modal {
+.modalquiz {
   &.modal-overlay {
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
     z-index: 30;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    top: 30%;
+    left: 30%;
+    background-color #fff
+    padding: 5rem;
   }
 
   &-window {
     background: #fff;
     border-radius: 4px;
     overflow: hidden;
+
   }
 
   &-content {
