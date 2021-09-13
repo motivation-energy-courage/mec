@@ -20,7 +20,7 @@
       </div>
 
       <div class="example-modal-window">
-        <MyModal @close="closeModal" @next="nextModal" v-if="modal">
+        <MyModal @close="closeModal" @next="nextModal" v-if="quizmodal">
           <div class="modal-title">問題！</div>
           {{ question[questionOrder].title }}<br />
 
@@ -115,7 +115,7 @@ export default {
   data() {
     return {
       questionOrder: 0,
-      modal: false,
+      quizmodal: false,
       Kaisetsu: false,
       SorF: false,
       isActive: false,
@@ -148,7 +148,7 @@ export default {
           title:
             "Q．一年間でアパレル業界から出る服の廃棄量はどれくらいでしょう？",
           comment:
-            "一年間に約29億着生産されますが、<br>そのおよそ半分は廃棄処分されている現状です😭⚡️",
+            "一年間に約29億着生産されますが、そのおよそ半分は廃棄処分されている現状です😭⚡️",
           answers: [
             {
               choice: "A．50万着",
@@ -239,6 +239,9 @@ export default {
         },
         {
           title: "Q．ラナプラザ事件は、どこの国で起こったでしょうか？",
+          comment:
+            "バングラデシュは豊かな緑と多くの川や水路が特徴の南アジアの国です！",
+
           answers: [
             {
               choice: "A．バングラデシュ",
@@ -356,42 +359,42 @@ export default {
       this.Kaisetsu = true
     },
     openModal1() {
-      this.modal = true
+      this.quizmodal = true
       this.questionOrder = 0
     },
     openModal2() {
-      this.modal = true
+      this.quizmodal = true
       this.questionOrder = 3
     },
     openModal3() {
-      this.modal = true
+      this.quizmodal = true
       this.questionOrder = 6
     },
     closeModal() {
-      this.modal = false
+      this.quizmodal = false
     },
     nextModal() {
       this.Kaisetsu = false
       this.SorF = false
       console.log(this.questionOrder)
       if (this.questionOrder == 8) {
-        this.modal = false
+        this.quizmodal = false
       } else if (this.questionOrder >= 6) {
-        this.madal = false
+        this.quizmadal = false
         this.questionOrder += 1
-        this.modal = true
+        this.quizmodal = true
       } else if (this.questionOrder == 5) {
-        this.modal = false
+        this.quizmodal = false
       } else if (this.questionOrder >= 3) {
-        this.modal = false
+        this.quizmodal = false
         this.questionOrder += 1
-        this.modal = true
+        this.quizmodal = true
       } else if (this.questionOrder == 2) {
-        this.modal = false
+        this.quizmodal = false
       } else {
-        this.modal = false
+        this.quizmodal = false
         this.questionOrder += 1
-        this.modal = true
+        this.quizmodal = true
       }
     },
   },
@@ -603,8 +606,10 @@ iframe {
 }
 
 .btn {
-  width: 100％;
-  height: 100％;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   line-height: 35px;
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -630,23 +635,27 @@ iframe {
 }
 
 .quiz-kaisetsu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 500px;
   height: 100px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
 .kaisetsu-btn {
-  position: absolute;
-  width: 70px;
-  height: 50px;
   line-height: 50px;
-  padding-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .kaisetsu-btn a {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 70px;
+  height: 50px;
   text-decoration: none;
   background: #ffffff;
   text-align: center;
