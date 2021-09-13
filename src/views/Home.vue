@@ -19,7 +19,7 @@
         <p>Animal Right</p>
       </div>
 
-      <div class="example-modal-window" v-bind:class="{ active: isActive }">
+      <div class="example-modal-window">
         <MyModal @close="closeModal" @next="nextModal" v-if="modal">
           <div class="modal-title">問題！</div>
           {{ question[questionOrder].title }}<br />
@@ -47,7 +47,7 @@
           </div>
 
           <div class="kaisetsu-btn">
-            <a v-on:click="Kaisetsudisplay">解説</a>
+            <a v-on:click="Kaisetsudisplay"> 解説</a>
           </div>
           <div class="quiz-kaisetsu" v-if="Kaisetsu">
             {{ question[questionOrder].comment }}
@@ -122,7 +122,7 @@ export default {
       seikaiOrFuseikai: "",
       question: [
         {
-          title: "Q.ジーンズ1本作るために何リットルの水が必要になるでしょう？",
+          title: "Q．ジーンズ1本作るために何リットルの水が必要になるでしょう？",
           comment: "これはなんと人が7年かけて飲む、水の量に相当します！！！",
           answers: [
             {
@@ -148,7 +148,7 @@ export default {
           title:
             "Q．一年間でアパレル業界から出る服の廃棄量はどれくらいでしょう？",
           comment:
-            "一年間に約29億着生産されますが、そのおよそ半分は廃棄処分されている現状です😭⚡️",
+            "一年間に約29億着生産されますが、<br>そのおよそ半分は廃棄処分されている現状です😭⚡️",
           answers: [
             {
               choice: "A．50万着",
@@ -409,6 +409,7 @@ export default {
   width: 100%;
   position: absolute;
   top: 0;
+  /* animation: zoomIn 2.8s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards; */
 }
 .home h1 {
   font-family: "Baskerville Old Face", serif;
@@ -666,9 +667,5 @@ iframe {
   margin-top: 0px;
   border: 2px solid #dedede;
   box-shadow: none;
-}
-
-.active {
-  display: none;
 }
 </style>
