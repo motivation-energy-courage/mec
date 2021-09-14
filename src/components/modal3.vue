@@ -10,7 +10,7 @@
           <div class="modal-content3" style="line-height: 50px">
             <img
               class="nakatasan"
-              src="@/assets/中田.jpg"
+              src="@/assets/古着回収.jpeg"
               width="220"
               height="180"
               border="4"
@@ -27,7 +27,7 @@
             </h2>
             <span id="sample1" style="text-align: center"
               ><h4>1.UNIQLO</h4></span
-            ><br />
+            ><br>
             ユニクロでは自社ブランドの商品を回収するリサイクルボックスを全店に設置。回収した衣服は、新たな服や燃料、素材に生まれ変わったり、難民キャンプに支援衣料としてリユースされたりします。
             また回収したダウン製品は、独自の技術で新たな商品として再生したのちに、販売しています。<br />
             <span id="sample2" style="text-align: center"
@@ -139,22 +139,28 @@
 
 #sample1 {
   border: solid 0.5px;
-  position: relative;
-  top: 543px;
+  position: absolute;
+  top: 570px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ffb2b2;
 }
 
 #sample2 {
   border: solid 0.5px;
   position: absolute;
-  top: 787px;
+  top: 823px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ddbcff;
 }
 
 #sample3 {
   border: solid 0.5px;
   position: absolute;
-  top: 1027px;
+  top: 1057px;
   background-color: #d8ffb2;
+   left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

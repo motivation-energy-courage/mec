@@ -63,7 +63,7 @@
             class="cosme"
           />
           <img
-            src="@/assets/ピアス.jpg"
+            src="@/assets/ナイキシューズ.jpg"
             width="30%"
             height="300"
             class="pierce"
@@ -71,11 +71,11 @@
 
           <div class="boxes" style="display: flex; flex-wrap: wrap">
             <div class="box1" v-for="(post, index) in posts" :key="index">
-              <h2 style="text-align: center">Title</h2>
+              <h2 style="text-align: center" class="titleborder">Title</h2><br>
               <h3 style="text-align: center">{{ post.title }}</h3>
               <br />
-              <h2 style="text-align: center">Detail</h2>
-              <h3 style="text-align: center">{{ post.details }}</h3>
+              <h2 style="text-align: center" class="titleborder">Detail</h2><br>
+              <h3 style="text-align: center" >{{ post.details }}</h3>
               <br />
 
             </div>
@@ -181,7 +181,7 @@ export default {
 
 #appp {
   position: relative;
-  top: 700px;
+  top: 580px;
   text-align: center;
 }
 
@@ -194,7 +194,7 @@ export default {
     border: 1px solid white;
     background: pink;
     cursor: pointer;
-        font-size: 23px;
+    font-size: 23px;
 
 }
 
@@ -297,7 +297,7 @@ export default {
 
 .text2 {
   width: 530px; /*親要素いっぱい広げる*/
-  padding: 200px 15px; /*ボックスを大きくする*/
+  padding: 130px 13px; /*ボックスを大きくする*/
   font-size: 16px;
   border-radius: 3px; /*ボックス角の丸み*/
   border: 2px solid #ddd; /*枠線*/
@@ -345,7 +345,7 @@ img.pierce {
 
 .box1 {
   width: 30%;
-  height: 400px;
+  height: 350px;
   background-color: #f0f8ff;
   margin: 0px 20px 20px;
 }
@@ -370,5 +370,15 @@ img.pierce {
   margin: 0px 10px 20px;
   position: absolute;
   top: 438px;
+}
+
+.titleborder {
+  border: dashed pink;
+  width: 30%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 23px;
+
 }
 </style>

@@ -9,12 +9,12 @@
           <a href="#!" class="modal-close2">✕</a>
           <div class="modal-content2" style="line-height: 50px">
             <img
-              class="nakatasan"
+              id="nakatasan"
               src="@/assets/中田.jpg"
               width="220"
               height="180"
               border="4"
-            />
+            /><br><br><br><br>
             <h2 style="background-color: #ffce9e; text-align: center">
               中田敦彦氏、エシカルブランド立ち上げ
             </h2>
@@ -26,7 +26,7 @@
             環境に優しい生地・伝統産業を継承する・高い原価率で高品質<br />低価格の３つのポイントを実現しています。<br />
             同氏は過去にも「地球に住めなくなる日」を解説し、気候変動に関する動画を作っていたり、自分自身がヴィーガンであり、食事と環境問題に関しても発信しています。<br />
             <img
-              class="nakatasan"
+              id="nakatanaka"
               src="@/assets/カールフォンリンネ.png"
               width="260"
               height="180"
@@ -52,6 +52,7 @@
   margin: 10px;
   position: relative;
   top: 530px;
+  left: 4%;
   border-radius: 30px;
 
   z-index: 1000;
@@ -121,10 +122,20 @@
   color: black;
 }
 
-.nakatasan {
-  position: relative;
-  top: 10px;
-  margin: 4px;
+#nakatasan {
+ position: absolute;
+  top: 110px;
   left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nakatanaka {
+  position: absolute;
+  top:910px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 </style>
+
+

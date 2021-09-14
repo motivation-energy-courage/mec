@@ -7,28 +7,29 @@
       <div class="modal-wrapper">
         <div class="modal-contents">
           <a href="#!" class="modal-close">✕</a>
-          <div class="modal-content2" style="line-height: 50px">
+          <div class="modal-content" style="line-height: 50px">
             <img
-              class="nakatasan"
+              id="nakatasan"
               src="@/assets/メチャカリ.png"
               width="220"
               height="180"
               border="4"
-            />
+            /><br><br><br><br>
             <h2 style="background-color: #ffce9e; text-align: center">
-              定額制服借り放題サービス「メチャカリ」
+               定額制服借り放題サービス「メチャカリ」
             </h2>
-           20～30代女性に最も使われるファッションレンタルアプリです。ストライプインターナショナルが展開するearth music&ecologyをはじめ、人気ブランドの新品アイテムを定額で何度でも借りることが可能。レディース・メンズ・キッズのアイテムを取扱い。夏は浴衣、冬はコートも借りることができます。返却時のクリーニングや洗濯は不要。<br />
+            20～30代女性に最も使われるファッションレンタルアプリです。ストライプインターナショナルが展開するearth music&ecologyをはじめ、人気ブランドの新品アイテムを定額で何度でも借りることが可能。レディース・メンズ・キッズのアイテムを取扱い。夏は浴衣、冬はコートも借りることができます。返却時のクリーニングや洗濯は不要。<br />
             <h2 style="background-color: #ffce9e; text-align: center">
-              「CARL VON LINNÉ」の3つの特長
+              月額定額で洋服が借り放題
             </h2>
-            環境に優しい生地・伝統産業を継承する・高い原価率で高品質<br />低価格の３つのポイントを実現しています。<br />
-            同氏は過去にも「地球に住めなくなる日」を解説し、気候変動に関する動画を作っていたり、自分自身がヴィーガンであり、食事と環境問題に関しても発信しています。<br />
+月額定額なので気軽にレンタル。楽しんだあとはクリーニング不要で返却。返却するとまた新たな洋服が借りられます。
+
+もうあなたのクローゼットが着なくなった服で埋め尽くされることはありません。洋服メインですが、バッグや帽子などの小物もレンタル可能になっています。
             <img
-              class="nakatasan"
+              id="nakatanaka"
               src="@/assets/メチャカリ2.jpg"
-              width="250"
-              height="160"
+              width="260"
+              height="180"
               border="4"
             />
           </div>
@@ -50,11 +51,11 @@
   color: #fff;
   margin: 10px;
   position: relative;
-  top: 370px;
+  top: 380px;
   border-radius: 30px;
-  text-align: center;
+  left: 44%;
+
   z-index: 1000;
-  left: 45%;
 }
 
 .modal-open a {
@@ -111,28 +112,30 @@
   position: relative;
   color: black;
 }
-.modal-contents {
+.modal-content {
   margin: 25px;
-
 }
-.modal-content2 {
-  margin: 25px;
-  text-align: center;
-
-}
-
-.nakatasan {
-  position: relative;
-
-  left: 10px;
-  margin: 4px;
-
-}
-
 .modal-close {
   position: absolute;
   top: 5px;
   right: 10px;
   color: black;
 }
+
+#nakatasan {
+ position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nakatanaka {
+  position: absolute;
+  top:910px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
 </style>
+
+
